@@ -25,9 +25,6 @@ def load_dataset():
     iris = load_iris()
     return iris
 
-
-
-
 def main():
     """
     Driver function
@@ -41,13 +38,18 @@ def main():
     new_data = np.delete(iris.data,removed, axis=0)
 
     # Train classifier
-    clf = tree.DecisionTreeClassifier() # defining decision tree classifier
-    clf = clf.fit(new_data,new_target) # train data on new data and new target
+    clf = tree.DecisionTreeClassifier()
+
+    # Defining decision tree classifier
+    clf = clf.fit(new_data,new_target)
+
+    # Train data on new data and new target
     tree.plot_tree(clf)
 
     # Make predictions
-    prediction = clf.predict(iris.data[removed]) #  assign removed data as input
+    prediction = clf.predict(iris.data[removed])
 
+    # Assign removed data as input
     print("Original Labels", iris.target[removed])
     print("Labels Predicted", prediction)
 
