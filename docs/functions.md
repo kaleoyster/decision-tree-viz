@@ -1,10 +1,32 @@
-# Functions 
+# 🗂  Functions
 
-The following are the functions created for the use of this project:
+## 🧰 List of functions
 
-| Name | Description | Arguments  | Returns |
-| ---- | ----------- | ---------- | ------- |
-| load_iris | loads a iris dataset from sklearn | None | returns a dataset object |
-| main | Driver function | None | None |
-| main | Driver function | None | None |
+| Functions    | Description          | Argument type | Return type |
+| ------------ | ---------------------| ------------- | ----------- |
+| load_dataset | Returns a dummy data | None          | sklearn.dataset object |
+
+## 🦾 Usage and examples
+
+### 1. load_dataset:
+Returns a dataset from sklearn.dataset
+
+#### Arguments
+- *none*
+
+#### Returns
+- *iris: sklearn.dataset*
+
+#### Example
+``` python
+iris = load_dataset()
+```
+```zsh
+       [7.2, 3. , 5.8, 1.6],
+       [7.4, 2.8, 6.1, 1.9],
+       [7.9, 3.8, 6.4, 2. ],
+       [6.4, 2.8, 5.6, 2.2],
+       [6.3, 2.8, 5.1, 1.5],
+       ....
+```
 

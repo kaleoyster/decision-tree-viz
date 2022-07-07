@@ -1,10 +1,8 @@
 """
 Description:
     A decision tree model to predict iris dataset.
-
 Author:
     Akshay Kale
-
 Date:
     July 2, 2022
 """
@@ -31,8 +29,9 @@ def main():
     """
     iris = load_dataset()
     print(iris.feature_names)
+    print(iris)
 
-    # Spilitting the dataset
+    # splitting the dataset
     removed =[0,50,100]
     new_target = np.delete(iris.target,removed)
     new_data = np.delete(iris.data,removed, axis=0)
