@@ -1,14 +1,20 @@
 <h1 align='center'>
-⚡️ Quickstart 🗺
+⚡️ Quickstart 
 </h1>
-
-An overiew and guide to setup
+<h4 align ='center'>   
+    An overiew and guide to setup
+</h4>
 
 ![Network of decision tree](images/hexagon-actuarial.png)
 
 ## 🍴 Setup
+#### Four simple steps:
+#### 1. Clone this repository
+#### 2. Install requirements
+#### 3. Run program
+#### 4. Visualize results
 
-![Deck Bridge Intervention Matrix](assets/intervention-matrix.png)
+![Deck Bridge Intervention Matrix](~/vimwiki/assets/intervention-matrix.png)
 
 ### 👉 Additional references
 | Document      | Documentation type | Description |
