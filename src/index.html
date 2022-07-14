@@ -1,0 +1,180 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title> Force Directed Graph For Bridge Decision Tree </title>
+        <meta name='description' content ="The HTML 5"/>
+        <meta name="author" content="SitePoint"/>
+    </head>
+
+<style>
+    #menu {
+        margin: 10px;
+    }
+
+    #content div {
+        display: inline-block;
+        margin: 2px;
+        background-color: orange;
+        color:white;
+        padding: 8px;
+        height: 14px;
+        text-align: center;
+    }
+
+</style>
+    <body>
+        <div id="viz"></div>
+        <button onclick='draw()'> Generate Visualization </button>
+        <button onclick='stop()'> Stop Visualization </button>
+        <svg id="svgID" width="640", height="480"> </svg>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script>
+
+            function draw(){
+                var graphData = dataForBridges();
+                drawUtility(graphData);
+                }
+
+            function drawUtility(graphData) {
+                //simulation.stop();
+                const scale = d3.scaleOrdinal(d3.schemeCategory10)
+                const color = d => scale(d.group)
+    
+                var svg =  d3.select("svg");
+                var width = svg.attr("width");
+                var height = svg.attr("height");
+               
+                var simulation = d3
+                .forceSimulation(graphData.nodes)
+                .force("charge", d3.forceManyBody().strength(-30))
+                .force("center", d3.forceCenter(width / 2, height / 2))
+                .force("link", d3.forceLink(graphData.links).id(function(d){
+                                    return d.id;
+                                }))
+                .alphaTarget(1) 
+                .on("tick", ticked);
+
+   
+                var links = svg
+                .append("g")
+                .selectAll("line")
+                .data(graphData.links)
+                .enter()
+                .append("line")
+                .attr("stroke-width", 3)
+                .style("stroke", "orange");
+    
+                var nodes = svg
+                .append("g")
+                .selectAll("circle")
+                .data(graphData.nodes)
+                .enter()
+                .append("circle")
+                .attr("r", 10)
+                .attr("fill", color);
+    
+                var texts = svg
+                .append("g")
+                .selectAll("text")
+                .data(graphData.nodes)
+                .enter()
+                .append("text")
+                .text(d=>d.id);
+    
+                var drag = d3
+                .drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+    
+                nodes.call(drag);
+    
+                function ticked(){
+                    texts
+                        .attr("x", d=>d.x)
+                        .attr("y", d=>d.y);
+    
+                    nodes
+                        .attr('cx', function(d){
+                                        return d.x;
+    
+                                    })
+                        .attr('cy', function(d){
+                                        return d.y;
+    
+                                    });
+                    links
+                        .attr('x1', function(d){
+                                        return d.source.x;
+                                    })
+    
+                        .attr('y1', function(d){
+                                        return d.source.y;
+                                    })
+    
+                        .attr('x2', function(d){
+                                        return d.target.x;
+                                    })
+    
+                        .attr('y2', function(d){
+                                        return d.target.y;
+                                    });
+    
+             }
+
+            function dragstarted(event){
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+             }
+            
+            function dragged(event){
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+             }
+
+            function dragended(event){
+                if (!event.active) simulation.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+              }
+            }
+
+            // TODO: This where the data will go
+            function dataForBridges(){
+               var graphData = {
+                    nodes: [
+                            {"id":'Bridge 1', "group":1},
+                            {"id":'Bridge 2', "group":2},
+                            {"id":'Bridge 3', "group":3},
+                            {"id":'Bridge 4', "group":2},
+                            {"id":'Bridge 5', "group":1},
+                            {"id":'Bridge 6', "group":1},
+                            ],
+
+                    links: [
+                            {"source":'Bridge 1', "target":'Bridge 2', "value": 5},
+                            {"source":'Bridge 2', "target":'Bridge 3', "value": 7},
+                            {"source":'Bridge 3', "target":'Bridge 5', "value": 8},
+                            {"source":'Bridge 4', "target":'Bridge 5', "value": 2},
+                            {"source":'Bridge 5', "target":'Bridge 6', "value": 15},
+                            {"source":'Bridge 6', "target":'Bridge 1', "value": 10},
+                            ]
+                        };
+                    
+                            var data = "{\"nodes\": [{"id":\"0\", "group":1}, {"id":"1\", "group":2}, {"id":\"2\", "group":1}, {"id":\"3\","group":1}, {"id":\"4\", "group": 2}], \"links\": [{\"source\": \"0\", \"target\": \"1\", \"value\": 1}, {\"source\": \"0\", \"target\": \"2\", \"value\": 1}, {\"source\": \"0\", \"target\": \"3\", \"value\": 1}, {\"source\": \"1\", \"target\": \"0\", \"value\": 1}, {\"source\": \"1\", \"target\": \"2\", \"value\": 1}, {\"source\": \"1\", \"target\": \"3\", \"value\": 1}, {\"source\": \"2\", \"target\": \"0\", \"value\": 1}, {\"source\": \"2\", \"target\": \"1\", \"value\": 1}, {\"source\": \"2\", \"target\": \"3\", \"value\": 1}, {\"source\": \"3\", \"target\": \"0\", \"value\": 1}, {\"source\": \"3\", \"target\": \"1\", \"value\": 1}, {\"source\": \"3\", \"target\": \"2\", \"value\": 1}]}"
+
+
+               var graphData1 = JSON.parse(data);
+               console.log(graphData1);
+               console.log(graphData);
+
+                return graphData;
+            }
+            
+            function redraw(){
+                // redraw (update the visualization)
+            }
+        </script>
+    </body>
+    </html>
