@@ -15,7 +15,6 @@ from sklearn import tree
 import graphviz
 from sklearn.tree import export_graphviz
 import pydotplus
-#import matplotlib as plt
 
 def load_dataset():
     """
@@ -50,7 +49,7 @@ def save_decision_tree(clf, features, dataset_class_names, filename):
     graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
     graph.write_png(filename)
 
-def print_decision_paths(clf, X_test, features):
+def print_decision_paths(clf, X_test, features, labels):
     """
     Description:
         print decision path
@@ -60,7 +59,6 @@ def print_decision_paths(clf, X_test, features):
         all_data
     """
     #TODO: Replace the X_test with all_data
-
     n_nodes = clf.tree_.node_count
     children_left = clf.tree_.children_left
     children_right = clf.tree_.children_right
@@ -73,15 +71,15 @@ def print_decision_paths(clf, X_test, features):
     sampleIdList = []
     featureIdList = []
     valueList = []
+    labelList= []
     inequalityList = []
     thresholdList = []
-
     node_indicator = clf.decision_path(X_test)
     leaf_id = clf.apply(X_test)
-
-    sample_ids = [i for i in range(10)]
+    sample_ids = [i for i in range(len(labels))]
+    counter = 0
     with open(fileName, 'w') as f:
-        for sample_id in sample_ids:
+        for sample_id, label in zip(sample_ids, labels):
             # Obtain ids of the nodes `sample_id` goes through, i.e., row `sample_id`
             node_index = node_indicator.indices[
                 node_indicator.indptr[sample_id] : node_indicator.indptr[sample_id + 1]
@@ -102,6 +100,7 @@ def print_decision_paths(clf, X_test, features):
                     valueList.append(X_test[sample_id, feature[node_id]])
                     inequalityList.append(threshold_sign)
                     thresholdList.append(threshold[node_id])
+                    labelList.append(label)
 
                 else:
                     threshold_sign = ">"
@@ -122,6 +121,8 @@ def print_decision_paths(clf, X_test, features):
                 valueList.append(X_test[sample_id, feature[node_id]])
                 inequalityList.append(threshold_sign)
                 thresholdList.append(threshold[node_id])
+                labelList.append(label)
+
 
     #sys.stdout = oStdout
     data = pd.DataFrame({
@@ -130,7 +131,8 @@ def print_decision_paths(clf, X_test, features):
                      'featureId': featureIdList,
                      'valueId': valueList,
                      'inequality': inequalityList,
-                     'threshold': thresholdList
+                     'threshold': thresholdList,
+                     'labels': labelList
                     })
     data.to_csv("path.csv")
 
@@ -161,13 +163,21 @@ def main():
     filename = 'iris-decision-tree.png'
 
     # Splitting the dataset
-    removed =[0, 10, 20, 30, 50, 60, 70, 80, 90, 100]
+    removed = [0, 10, 20, 30, 50, 60, 70, 80, 90, 100]
     new_target = np.delete(iris.target, removed)
     new_data = np.delete(iris.data,
                          removed,
                          axis=0)
 
     features = iris['feature_names']
+
+    label_dictionary = {
+        0:'setosa',
+        1:'versicolor',
+        2:'virginica',
+    }
+
+    labels = [label_dictionary[lab] for lab in iris.target]
     X_test = iris.data[removed]
 
     # Train classifier
@@ -193,7 +203,7 @@ def main():
     print("Labels Predicted", prediction)
 
     # Export a data frame of rules
-    print_decision_paths(clf, X_test, features)
+    print_decision_paths(clf, iris.data, features, iris.target)
     save_decision_tree(clf, features, iris.target_names, filename)
 
 if __name__=="__main__":
