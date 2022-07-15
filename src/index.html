@@ -160,13 +160,9 @@
                             {"source":'Bridge 6', "target":'Bridge 1', "value": 10},
                             ]
                         };
-                    
-                    var data = "{\"nodes\": [{"id":\"0\", "group":1}, {"id":"1\", "group":2}, {"id":\"2\", "group":1}, {"id":\"3\","group":1}, {"id":\"4\", "group": 2}], \"links\": [{\"source\": \"0\", \"target\": \"1\", \"value\": 1}, {\"source\": \"0\", \"target\": \"2\", \"value\": 1}, {\"source\": \"0\", \"target\": \"3\", \"value\": 1}, {\"source\": \"1\", \"target\": \"0\", \"value\": 1}, {\"source\": \"1\", \"target\": \"2\", \"value\": 1}, {\"source\": \"1\", \"target\": \"3\", \"value\": 1}, {\"source\": \"2\", \"target\": \"0\", \"value\": 1}, {\"source\": \"2\", \"target\": \"1\", \"value\": 1}, {\"source\": \"2\", \"target\": \"3\", \"value\": 1}, {\"source\": \"3\", \"target\": \"0\", \"value\": 1}, {\"source\": \"3\", \"target\": \"1\", \"value\": 1}, {\"source\": \"3\", \"target\": \"2\", \"value\": 1}]}"
-
-
-               var graphData1 = JSON.parse(data);
-               console.log(graphData1);
-               console.log(graphData);
+                const jsonData= require('./network.json'); 
+                console.log(jsonData);
+                console.log(graphData);
 
                 return graphData;
             }

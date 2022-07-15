@@ -135,7 +135,17 @@ def print_decision_paths(clf, X_test, features):
     data.to_csv("path.csv")
 
 def log_decision_tree(clf, feature_cols, filename):
-    # Export to text (decision tree)
+    """
+    Description:
+        Save a filename
+
+    Args:
+        clf
+        feature_cols
+        filename
+
+    Return:
+    """
     r = tree.export_text(clf, feature_names=feature_cols)
     with open(filename, 'w') as fout:
         fout.write(r)
@@ -156,6 +166,7 @@ def main():
     new_data = np.delete(iris.data,
                          removed,
                          axis=0)
+
     features = iris['feature_names']
     X_test = iris.data[removed]
 
