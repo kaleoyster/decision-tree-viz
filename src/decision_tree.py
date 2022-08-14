@@ -28,7 +28,8 @@ def load_dataset():
     iris = load_iris()
     return iris
 
-def save_decision_tree(clf, features, dataset_class_names, filename):
+def save_decision_tree(clf, features,
+                       dataset_class_names, filename):
     """
     Description:
         Save a png of the created decision tree
@@ -37,8 +38,6 @@ def save_decision_tree(clf, features, dataset_class_names, filename):
     Returns:
         an exported decision tree
     """
-    # filename
-
     # Save the decision tree
     dot_data = StringIO()
     export_graphviz(clf, out_file=dot_data,
@@ -57,6 +56,8 @@ def print_decision_paths(clf, X_test, features, labels):
     Args:
         X_test
         all_data
+
+    Return:
     """
     #TODO: Replace the X_test with all_data
     n_nodes = clf.tree_.node_count
@@ -104,17 +105,17 @@ def print_decision_paths(clf, X_test, features, labels):
 
                 else:
                     threshold_sign = ">"
-                    print(
-                    "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
-                    "{inequality} {threshold})".format(
-                        node=node_id,
-                        sample=sample_id,
-                        feature=feature[node_id],
-                        value=X_test[sample_id, feature[node_id]],
-                        inequality=threshold_sign,
-                        threshold=threshold[node_id],
-                    )
-                )
+                   # print(
+                   # "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
+                   # "{inequality} {threshold})".format(
+                   #     node=node_id,
+                   #     sample=sample_id,
+                   #     feature=feature[node_id],
+                   #     value=X_test[sample_id, feature[node_id]],
+                   #     inequality=threshold_sign,
+                   #     threshold=threshold[node_id],
+                   # )
+                   # )
                 nodeList.append(node_id)
                 sampleIdList.append(sample_id)
                 featureIdList.append(features[feature[node_id]])
