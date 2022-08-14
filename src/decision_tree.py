@@ -104,17 +104,17 @@ def print_decision_paths(clf, X_test, features, labels):
 
                 else:
                     threshold_sign = ">"
-            #        print(
-            #        "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
-            #        "{inequality} {threshold})".format(
-            #            node=node_id,
-            #            sample=sample_id,
-            #            feature=feature[node_id],
-            #            value=X_test[sample_id, feature[node_id]],
-            #            inequality=threshold_sign,
-            #            threshold=threshold[node_id],
-            #        )
-            #    )
+                    print(
+                    "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
+                    "{inequality} {threshold})".format(
+                        node=node_id,
+                        sample=sample_id,
+                        feature=feature[node_id],
+                        value=X_test[sample_id, feature[node_id]],
+                        inequality=threshold_sign,
+                        threshold=threshold[node_id],
+                    )
+                )
                 nodeList.append(node_id)
                 sampleIdList.append(sample_id)
                 featureIdList.append(features[feature[node_id]])
