@@ -81,12 +81,11 @@ def main():
     with open('network.json', 'w') as json_file:
         json.dump(network, json_file)
 
-    fields = ['source', 'target', 'count']
-
-    with open('links.csv', 'w') as f:
-        write = csv.writer(f)
-        write.writerow(fields)
-        write.writerows(links)
+    #fields = ['source', 'target', 'count']
+    #with open('links.csv', 'w') as f:
+    #    write = csv.writer(f)
+    #    #write.writerow(fields)
+    #    write.writerows(links)
 
 if __name__ == '__main__':
     main()
