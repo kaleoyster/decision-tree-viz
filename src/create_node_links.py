@@ -1,7 +1,5 @@
 """
 Description:
-    1. Creates nodes and links  [Done]
-    2. Saves in json format [Done]
 """
 import csv
 import json
@@ -15,6 +13,7 @@ def read_file():
         paths = csv.reader(csv_file, delimiter = ',')
         header = next(paths)
         for row in paths:
+            print(row)
             all_paths.append(row)
     return all_paths
 

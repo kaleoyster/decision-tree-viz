@@ -2,7 +2,6 @@
 Methodology 🧭
 </h1>
 
-
 ![Methodology]()
 <p center='align'> <b>Figure 1: Research methodology of the study</b></p>
 
@@ -13,10 +12,20 @@ Methodology 🧭
 * **State:** All U.S. states 🇺🇸
 * 👉 [**Data acqusition and transformation**](https://github.com/kaleoyster/nbi/tree/b5fb41950ee0a44c1d8967a1a672c0e3ea47b07f)
 
-## 🧪 Formulaization
+## Data transformation
+
+### Conversion of the decision tree to graph network
+The following are the implemented steps used for transformation of the dataset. 
+
+1. Conversion of decision tree rules from  for each sample
+    - Serialization: Converting decision tree rules to csv files for each sample.
+    - 
+
+## 🧪 Formulaization / conversion of the decision - tree to nodes
+
 
 ### Definition of graphs
-Formally, a graph is sets $(V, E)$, where:
+Formally, a graph is sets $(V, E)$, where [1]:
 - $V$ is a non-empty set whose elements are called $vertices$
 - $E$ is a collection of two-element subsets of $V$ called $Edges$.
 
@@ -67,7 +76,8 @@ Developed by Grasser and Murachver in 1985 to get detailed knwoledge from comput
 A period life table is baed on the mortality expeirence of a population during a relative short period of time. 
 
 #### Validation
-We validate the use of our functions by applying to publicly available data to match the resultant results.  we implemented on bridges to understand the life expectancy of the population used in the following reference [3].
+We validate the use of our methodology by applying to publicly available data to match the resultant results.  The final version of this method was intended to understand the interaction between the bridges with respect to the attributes that lead to maintenance. 
+
 
 ## References
-1. [Conceptual Graph Analysis - Brief introduction](https://slideplayer.com/slide/3741719/)
+1. [Conceptual Graph Analysis - a brief introduction](https://slideplayer.com/slide/3741719/)

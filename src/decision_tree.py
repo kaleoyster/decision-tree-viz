@@ -1,8 +1,10 @@
 """
 Description:
     A decision tree model to predict iris dataset.
+
 Author:
     Akshay Kale
+
 Date:
     July 2, 2022
 """
@@ -103,26 +105,35 @@ def print_decision_paths(clf, X_test, features, labels):
                     thresholdList.append(threshold[node_id])
                     labelList.append(label)
 
+                    print(
+                    "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
+                    "{inequality} {threshold})".format(
+                        node=node_id,
+                        sample=sample_id,
+                        feature=feature[node_id],
+                        value=X_test[sample_id, feature[node_id]],
+                        inequality=threshold_sign,
+                        threshold=threshold[node_id],
+                    ))
                 else:
                     threshold_sign = ">"
-                   # print(
-                   # "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
-                   # "{inequality} {threshold})".format(
-                   #     node=node_id,
-                   #     sample=sample_id,
-                   #     feature=feature[node_id],
-                   #     value=X_test[sample_id, feature[node_id]],
-                   #     inequality=threshold_sign,
-                   #     threshold=threshold[node_id],
-                   # )
-                   # )
-                nodeList.append(node_id)
-                sampleIdList.append(sample_id)
-                featureIdList.append(features[feature[node_id]])
-                valueList.append(X_test[sample_id, feature[node_id]])
-                inequalityList.append(threshold_sign)
-                thresholdList.append(threshold[node_id])
-                labelList.append(label)
+                    print(
+                    "decision node {node} : (X_test[{sample}, {feature}] = {value}) "
+                    "{inequality} {threshold})".format(
+                        node=node_id,
+                        sample=sample_id,
+                        feature=feature[node_id],
+                        value=X_test[sample_id, feature[node_id]],
+                        inequality=threshold_sign,
+                        threshold=threshold[node_id],
+                    ))
+                    nodeList.append(node_id)
+                    sampleIdList.append(sample_id)
+                    featureIdList.append(features[feature[node_id]])
+                    valueList.append(X_test[sample_id, feature[node_id]])
+                    inequalityList.append(threshold_sign)
+                    thresholdList.append(threshold[node_id])
+                    labelList.append(label)
 
 
     #sys.stdout = oStdout
