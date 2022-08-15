@@ -60,6 +60,7 @@ Serving HTTP on :: port 8000 (http://[localhost]:8000/) ...
 
 | Document      | Documentation type | Description |
 | ------------- | ------------------ | ----------- |
+| [Dataset](quickstart.md) | Data | Contains collections of the files |
 | [Quickstart](quickstart.md) | Concept | An overview and guide to setup this project |
 | [Methodology](methodology.md) | Concept, Task | Simplest possible method of implementing your API |
 | [Functions](functions.md) | Reference | List of references for the functions used|
