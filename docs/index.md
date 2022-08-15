@@ -57,10 +57,11 @@ Serving HTTP on :: port 8000 (http://[localhost]:8000/) ...
 ```
 
 ### 👉 Additional references
+
 | Document      | Documentation type | Description |
 | ------------- | ------------------ | ----------- |
-| [Quickstart](docs/quickstart.md) | Concept | An overview and guide to setup this project |
-| [Methodology](docs/methodology.md) | Concept, Task | Simplest possible method of implementing your API |
-| [Functions](docs/functions.md) | Reference | List of references for the functions used|
-| [Related Projects](docs/related-projects.md) | Reference | List of projects related to this repository |
+| [Quickstart](quickstart.md) | Concept | An overview and guide to setup this project |
+| [Methodology](methodology.md) | Concept, Task | Simplest possible method of implementing your API |
+| [Functions](functions.md) | Reference | List of references for the functions used|
+| [Related Projects](related-projects.md) | Reference | List of projects related to this repository |
 
