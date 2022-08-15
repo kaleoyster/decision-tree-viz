@@ -22,7 +22,7 @@ def create_node_dictionary(paths):
     dictionary = defaultdict(list)
     new_nodes = []
     node_labels = defaultdict()
-    for row in paths[:]:
+    for row in paths[:10]:
         label = row[-1]
         rule = row[3:-1]
         rule = ' '.join(rule)
