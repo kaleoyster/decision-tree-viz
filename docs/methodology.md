@@ -63,6 +63,7 @@ Developed by Grasser and Murachver in 1985 to get detailed knwoledge from comput
 
 
 #### 💡 Conceptual overview of the essential actuarial functions
+
 | Item           | Description                                                                                                    |
 | -------------- | -------------------------------------------------------------------------------------------------------------- |
 | $leave(x)$     | The number of bridges that leave the study at age $x$                                                          |
@@ -73,11 +74,14 @@ Developed by Grasser and Murachver in 1985 to get detailed knwoledge from comput
 | $_yP_1$        | Probability of survival at age $y$ for the next year. See Equation 5                                           |
 
 #### ☁️  Probabilities
+
 A period life table is baed on the mortality expeirence of a population during a relative short period of time. 
 
 #### Validation
+
 We validate the use of our methodology by applying to publicly available data to match the resultant results.  The final version of this method was intended to understand the interaction between the bridges with respect to the attributes that lead to maintenance. 
 
 
 ## References
+
 1. [Conceptual Graph Analysis - a brief introduction](https://slideplayer.com/slide/3741719/)
