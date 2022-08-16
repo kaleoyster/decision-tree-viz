@@ -1,7 +1,7 @@
 <h1 align='center'>
      ⭐️ Exploring the rules of the decision tree 🌲
 </h1>
-
+<p align='center'><a href="index_old1.html"> Visualization </a></p>
 
 - **Big idea** -- Machine learning models are difficult to understand. 
 - **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
@@ -9,6 +9,7 @@
 - **Technical details** --  Train a complex dataset (NBI) simple machine learning model such as decision tree. Using graphs / networks understand the rules of the decision tree.
 
 ### 🎯 Objective
+
 - The objective of this research study is to develop a method for explaining large decision rules and how it affects bridges. 
 * We specifically try apply this technique on the National Bridge Inventory dataset.
 
