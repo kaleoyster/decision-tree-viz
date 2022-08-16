@@ -1,5 +1,5 @@
 <h1 align='center'>
- 🌲 Exploring the rules of the decision tree 🌲
+     ⭐️ Exploring the rules of the decision tree 🌲
 </h1>
 
 
