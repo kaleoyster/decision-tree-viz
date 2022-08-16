@@ -2,7 +2,6 @@
  🌲 Exploring the rules of the decision tree 🌲
 </h1>
 
-![Network of decision tree]()
 
 - **Big idea** -- Machine learning models are difficult to understand. 
 - **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
@@ -22,12 +21,11 @@
 - We use explainable methods such as decision trees.
 - Identify the commonality between the bridges by visualizing the rules between the trees.
 
-![Deck Bridge Intervention Matrix]()
 
 ### 🎬 Getting started
 
-
 ####  Clone
+
 ```zsh
 git clone https://github.com/kaleoyster/decision-tree-viz.git
 ```
@@ -60,7 +58,7 @@ Serving HTTP on :: port 8000 (http://[localhost]:8000/) ...
 
 | Document      | Documentation type | Description |
 | ------------- | ------------------ | ----------- |
-| [Dataset](quickstart.md) | Data | Contains collections of the files |
+| [Dataset](dataset.md) | Data | Contains collections of the files |
 | [Quickstart](quickstart.md) | Concept | An overview and guide to setup this project |
 | [Methodology](methodology.md) | Concept, Task | Simplest possible method of implementing your API |
 | [Functions](functions.md) | Reference | List of references for the functions used|

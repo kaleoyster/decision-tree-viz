@@ -5,18 +5,38 @@
     An overiew and guide to setup
 </h4>
 
-![Network of decision tree](images/hexagon-actuarial.png)
+####  Clone
+```zsh
+git clone https://github.com/kaleoyster/decision-tree-viz.git
+```
 
-## 🍴 Setup
-#### Four simple steps:
-#### 1. Clone this repository
-#### 2. Install requirements
-#### 3. Run program
-#### 4. Visualize results
+#### Run requirements.txt
 
-![Deck Bridge Intervention Matrix](~/vimwiki/assets/intervention-matrix.png)
+```zsh
+pip install -r requirements.txt
+```
+
+#### Run the decision tree model
+
+```zsh
+python3 src/decision_tree.py
+```
+
+#### Run http server 
+
+```zsh
+python -m http.server
+```
+
+#### View visualization
+
+```zsh
+Serving HTTP on :: port 8000 (http://[localhost]:8000/) ...
+```
+
 
 ### 👉 Additional references
+
 | Document      | Documentation type | Description |
 | ------------- | ------------------ | ----------- |
 | [Quickstart](docs/quickstart.md) | Concept | An overview and guide to setup this project |
