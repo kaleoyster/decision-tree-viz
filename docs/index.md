@@ -1,7 +1,7 @@
 <h1 align='center'>
      ⭐️ Exploring the rules of the decision tree 🌲
 </h1>
-<p align='center'><a href="index_old1.html"> Visualization </a></p>
+<p align='center'><a href="visualization.html"> Dynamic Visualization </a></pa
 
 - **Big idea** -- Machine learning models are difficult to understand. 
 - **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
