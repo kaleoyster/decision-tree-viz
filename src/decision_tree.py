@@ -172,7 +172,7 @@ def main():
     # Decision Tree
     iris = load_dataset()
     file_log = 'iris-decision-tree.log'
-    filename = 'iris-decision-tree.png'
+    filename = '../docs/images/iris-decision-tree.png'
 
     # Splitting the dataset
     removed = [0, 10, 20, 30, 50, 60, 70, 80, 90, 100]

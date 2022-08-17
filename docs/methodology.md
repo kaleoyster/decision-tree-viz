@@ -1,5 +1,5 @@
 <h1 align='center'>
-Methodology 🧭
+     Methodology 🧭
 </h1>
 
 ![Methodology]()
