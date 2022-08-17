@@ -1,7 +1,8 @@
 <h1 align='center'>
      ⭐️ Exploring the rules of the decision tree 🌲
 </h1>
-<p align='center'><a href="visualization.html"> Dynamic Visualization </a></pa
+
+<p align='center'><a href="visualization.html"> Dynamic Visualization </a></p>
 
 - **Big idea** -- Machine learning models are difficult to understand. 
 - **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
@@ -14,9 +15,11 @@
 * We specifically try apply this technique on the National Bridge Inventory dataset.
 
 ### 💪 Challenge
+
 - In the NBI dataset, it is a **challenge** to identify maintainance patterns and various factors that interact in explaining bridge performance and maintenance. Because, the use of `reconstruction_year` does not provide an valuable information about the type of repair or reconstruction done.
 
 ### 🧪 Solution
+
 - To address this challenge we can use bridge intervention matrix, that utilizes the bridge intervention matrix for `deck` to identify various types of intervention depending on the probability of the transition.
 - With large set of complicated rules, it is difficult to understand the interactions.
 - We use explainable methods such as decision trees.
