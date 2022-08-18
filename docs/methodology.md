@@ -43,7 +43,6 @@ We use $A--B$ to denote an edge between vertices $A$ and $B$ rather than the set
 ###  Conceptual graph analysis
 Developed by Grasser and Murachver in 1985 to get detailed knwoledge from computer science experts and found  away of representing it in a coherent fashion. There was a transformation of nodes an questions of the original method and have extended its application from information design to instructional design.j
 
-
 #### Assumptions
 1. Expert knowledge can be gained through structured and unstructured interview.
 2. Expert knowledge can be graphed and labeled in a graph 
