@@ -19,17 +19,15 @@ The following are the implemented steps used for transformation of the dataset.
 
 1. Conversion of decision tree rules from  for each sample
     - Serialization: Converting decision tree rules to csv files for each sample.
-    - 
 
 ## 🧪 Formulaization / conversion of the decision - tree to nodes
-
 
 ### Definition of graphs
 Formally, a graph is sets $(V, E)$, where [1]:
 - $V$ is a non-empty set whose elements are called $vertices$
 - $E$ is a collection of two-element subsets of $V$ called $Edges$.
 
-We use $A--B$ to denote an edge between vertices $A$ and $B$ rather than the set notation ${A, B}. Note that $A--B$ and $B--A$ are the same edge, just as ${A, B}$ and ${B, A}$ are the same set.
+We use $A--B$ to denote an edge between vertices $A$ and $B$ rather than the set notation $${A, B}$$. Note that $A--B$ and $B--A$ are the same edge, just as ${A, B}$ and ${B, A}$ are the same set.
 
 ### Mathematical formulation
 
@@ -57,30 +55,5 @@ Developed by Grasser and Murachver in 1985 to get detailed knwoledge from comput
 
 #### Differences from the Network
 
-
-## ⚙️  Brief overview of the algorithm
-
-
-#### 💡 Conceptual overview of the essential actuarial functions
-
-| Item           | Description                                                                                                    |
-| -------------- | -------------------------------------------------------------------------------------------------------------- |
-| $leave(x)$     | The number of bridges that leave the study at age $x$                                                          |
-| $exposures(x)$ | The number of bridges in the study at age $x$                                                                  |
-| $h(x)$         | Hazard rate age $x$. See equation 1                                                                            |
-| $S(x)$         | Survival rate age $x$. See equation 2                                                                          |
-| $F(x)$         | The mortality rate (or cumulative probability of failure) of bridges exposed at age 1 before reaching age $x$  |
-| $_yP_1$        | Probability of survival at age $y$ for the next year. See Equation 5                                           |
-
-#### ☁️  Probabilities
-
-A period life table is baed on the mortality expeirence of a population during a relative short period of time. 
-
-#### Validation
-
-We validate the use of our methodology by applying to publicly available data to match the resultant results.  The final version of this method was intended to understand the interaction between the bridges with respect to the attributes that lead to maintenance. 
-
-
 ## References
-
 1. [Conceptual Graph Analysis - a brief introduction](https://slideplayer.com/slide/3741719/)
