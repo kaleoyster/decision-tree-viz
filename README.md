@@ -8,6 +8,7 @@
 - **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
 - **Birds eye view of the idea** --  We plan to undo the complexity of the large decision tree model and explain what it means to make for the rest of the entities.
 - **Technical details** --  Train a complex dataset (NBI) simple machine learning model such as decision tree. Using graphs / networks understand the rules of the decision tree.
+- **What's next** -- There are future directions to this methods, some of them are inspired by the limitations.
 
 ### 🎯 Objective
 - The objective of this research study is to develop a method for explaining large decision rules and how it affects bridges. 
