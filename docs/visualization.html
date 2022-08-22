@@ -5,8 +5,8 @@
         <meta name='description' content ="The HTML 5"/>
         <meta name="author" content="SitePoint"/>
     </head>
-<style>
 
+<style type="text/css">
     #menu {
         margin: 10px;
     }
@@ -20,6 +20,25 @@
         height: 14px;
         text-align: center;
     }
+
+    .tooltip {
+      fill: white;
+      font-family: sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid gray;
+    }
+    
+    .tooltip_node{
+      fill: deepskyblue;
+      color: white;
+      font-family: sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid crimson;
+    }
+    
+    h5 {text-align: center;}
 
 </style>
 
@@ -63,7 +82,7 @@
                 .data(graphData.nodes)
                 .enter()
                 .append("circle")
-                .attr("r", 10)
+                .attr("r", 40)
                 .attr("fill", color)
                 .on("mouseover", tooltip_node_in)
                 .on("mouseout", tooltip_node_out);
@@ -79,7 +98,6 @@
                 .on("mouseover", tooltip_in)
                 .on("mouseout", tooltip_out);
     
-                    
                 var texts = svg
                 .append("g")
                 .selectAll("text")
@@ -131,7 +149,7 @@
             function tooltip_out() {
                 return tooltip
                     .transition()
-                    .duration(20)
+                    .duration(100)
                     .style("visibility", "hidden");
             }
 
@@ -150,7 +168,7 @@
             function tooltip_node_out() {
                 return tooltip_node
                     .transition()
-                    .duration(10)
+                    .duration(100)
                     .style("visibility", "hidden");
             }
             // Done
