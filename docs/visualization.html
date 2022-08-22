@@ -82,7 +82,7 @@
                 .data(graphData.nodes)
                 .enter()
                 .append("circle")
-                .attr("r", 40)
+                .attr("r", d => d.group*6)
                 .attr("fill", color)
                 .on("mouseover", tooltip_node_in)
                 .on("mouseout", tooltip_node_out);
@@ -93,7 +93,7 @@
                 .data(graphData.links)
                 .enter()
                 .append("line")
-                .attr("stroke-width", 3)
+                .attr("stroke-width", (d) => d.value)
                 .style("stroke", "black")
                 .on("mouseover", tooltip_in)
                 .on("mouseout", tooltip_out);
@@ -138,8 +138,9 @@
             function tooltip_in(event, d) {
                 return tooltip
                     .html(
-                        `<h4>Source: ${d.source.id}</h4>
-                         <h4>Target: ${d.target.id}</h4>`
+                        `<h4> Source: ${d.source.id} </h4>
+                         <h4> Target: ${d.target.id} </h4>
+                         <h4> Target: ${d.value} </h4>`
                     )
                     .style("visibility", "visible")
                     .style("top", event.pageY + "px")
@@ -171,6 +172,7 @@
                     .duration(100)
                     .style("visibility", "hidden");
             }
+                                
             // Done
             function ticked(){
                     texts
