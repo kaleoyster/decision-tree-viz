@@ -5,8 +5,8 @@
         <meta name='description' content ="The HTML 5"/>
         <meta name="author" content="SitePoint"/>
     </head>
-<style>
 
+<style type="text/css">
     #menu {
         margin: 10px;
     }
@@ -21,6 +21,25 @@
         text-align: center;
     }
 
+    .tooltip {
+      fill: white;
+      font-family: sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid gray;
+    }
+    
+    .tooltip_node{
+      fill: deepskyblue;
+      color: white;
+      font-family: sans-serif;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid crimson;
+    }
+    
+    h5 {text-align: center;}
+
 </style>
 
     <body>
@@ -31,9 +50,11 @@
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script>
 
+            // (Generate) -> draw() -> generateForBridges() -> 
             function draw(){
-                var graphData = dataForBridges();
-                drawUtility(graphData);
+                // var graphData = dataForBridges(); // function to generate the graphdata
+                dataForBridges(); // function to generate the graphdat
+                //drawUtility(graphData)
                 }
 
             function drawUtility(graphData) {
@@ -54,24 +75,28 @@
                                 }))
                 .alphaTarget(1) 
                 .on("tick", ticked);
-   
-                var links = svg
-                .append("g")
-                .selectAll("line")
-                .data(graphData.links)
-                .enter()
-                .append("line")
-                .attr("stroke-width", 3)
-                .style("stroke", "orange");
-    
+  
                 var nodes = svg
                 .append("g")
                 .selectAll("circle")
                 .data(graphData.nodes)
                 .enter()
                 .append("circle")
-                .attr("r", 10)
-                .attr("fill", color);
+                .attr("r", d => d.group*6)
+                .attr("fill", color)
+                .on("mouseover", tooltip_node_in)
+                .on("mouseout", tooltip_node_out);
+
+                var links = svg
+                .append("g")
+                .selectAll("line")
+                .data(graphData.links)
+                .enter()
+                .append("line")
+                .attr("stroke-width", (d) => d.value)
+                .style("stroke", "black")
+                .on("mouseover", tooltip_in)
+                .on("mouseout", tooltip_out);
     
                 var texts = svg
                 .append("g")
@@ -88,8 +113,68 @@
                 .on("end", dragended);
     
                 nodes.call(drag);
-    
-                function ticked(){
+
+            // new
+            let tooltip = d3
+                .select("body")
+                .append("div")
+                .style("position", "absolute")
+                .style("visibility", "hidden")
+                .style("background-color", "grey")
+                .style("color", "white")
+                .style("text-shadow", "1px 1px 1px #000000")
+                .attr("class", "tooltip");
+
+            // new (node) 
+            let tooltip_node = d3
+                .select("body")
+                .append("div")
+                .style("position", "absolute")
+                .style("visibility", "hidden")
+                .style("background-color", "crimson")
+                .style("text-shadow", "1px 1px 1px #000000")
+                .attr("class", "tooltip_node");
+
+            function tooltip_in(event, d) {
+                return tooltip
+                    .html(
+                        `<h4> Source: ${d.source.id} </h4>
+                         <h4> Target: ${d.target.id} </h4>
+                         <h4> Target: ${d.value} </h4>`
+                    )
+                    .style("visibility", "visible")
+                    .style("top", event.pageY + "px")
+                    .style("left", event.pageX + "px");
+            }
+
+            function tooltip_out() {
+                return tooltip
+                    .transition()
+                    .duration(100)
+                    .style("visibility", "hidden");
+            }
+
+            // new (node)
+            function tooltip_node_in(event, d) {
+                return tooltip_node
+                    .html(
+                        `<h4>${d.id}</h4>`
+                    )
+                    .style("visibility", "visible")
+                    .style("top", event.pageY + "px")
+                    .style("left", event.pageX + "px");
+            }
+
+            // new (node)
+            function tooltip_node_out() {
+                return tooltip_node
+                    .transition()
+                    .duration(100)
+                    .style("visibility", "hidden");
+            }
+                                
+            // Done
+            function ticked(){
                     texts
                         .attr("x", d=>d.x)
                         .attr("y", d=>d.y);
@@ -122,17 +207,20 @@
     
              }
 
+            // Done
             function dragstarted(event){
                 if (!event.active) simulation.alphaTarget(0.3).restart();
                     event.subject.fx = event.subject.x;
                     event.subject.fy = event.subject.y;
              }
             
+            // Done
             function dragged(event){
                 event.subject.fx = event.x;
                 event.subject.fy = event.y;
              }
 
+            // Done
             function dragended(event){
                 if (!event.active) simulation.alphaTarget(0);
                     event.subject.fx = null;
@@ -182,30 +270,18 @@
                          "value": 10},
                     ]
                 };
-//
-//             const getData = async() => {
-//                const response =  await fetch('network.json');
-//                const data = await response.json();
-//                return JSON.parse(data);
-//            }
-//
-//             var data = getData();
-//             const jsonData = fetch('network.json')
-//                   .then(results => results.json())
-//                   .then(JSON.parse);
-//
-//            const getJsonData = async () => {
-//                const jData = await jsonData;
-//                console.log(jData);
-//            };
-//
-//            getJsonData();
-              d3.json("data/network.json", function(data){
-                    console.log("data");
-                    console.log(data);
-                        });
+
+                drawUtility(graphData);
+                //fetch('./data/network.json')
+                //   .then(response => response.json())
+                //   .then(result => {                                   
+                //                   drawUtility(result);
+                //               });
             
-            return graphData;
+           // let data1 = data;
+            //console.log(data1);
+            //console.log(data1.length);
+            //return graphData;
             }
             
        </script>
