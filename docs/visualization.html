@@ -31,9 +31,11 @@
         <script src="https://d3js.org/d3.v6.min.js"></script>
         <script>
 
+            // (Generate) -> draw() -> generateForBridges() -> 
             function draw(){
-                var graphData = dataForBridges();
-                drawUtility(graphData);
+                // var graphData = dataForBridges(); // function to generate the graphdata
+                dataForBridges(); // function to generate the graphdat
+                //drawUtility(graphData)
                 }
 
             function drawUtility(graphData) {
@@ -182,30 +184,18 @@
                          "value": 10},
                     ]
                 };
-//
-//             const getData = async() => {
-//                const response =  await fetch('network.json');
-//                const data = await response.json();
-//                return JSON.parse(data);
-//            }
-//
-//             var data = getData();
-//             const jsonData = fetch('network.json')
-//                   .then(results => results.json())
-//                   .then(JSON.parse);
-//
-//            const getJsonData = async () => {
-//                const jData = await jsonData;
-//                console.log(jData);
-//            };
-//
-//            getJsonData();
-              d3.json("data/network.json", function(data){
-                    console.log("data");
-                    console.log(data);
-                        });
+
+                //drawUtility(graphData);
+                fetch('./data/network.json')
+                   .then(response => response.json())
+                   .then(result => {                                   
+                                   drawUtility(result);
+                               });
             
-            return graphData;
+           // let data1 = data;
+            //console.log(data1);
+            //console.log(data1.length);
+            //return graphData;
             }
             
        </script>
