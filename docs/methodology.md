@@ -6,7 +6,6 @@
 <p center='align'> <b>Figure 1: Research methodology of the study</b></p>
 
 ## Data 
-
 * **Source:** National Bridge Inventory
 * **Timeline:** 1992 to 2021
 * **State:** All U.S. states 🇺🇸
@@ -15,9 +14,10 @@
 ## Data transformation
 
 ### Conversion of the decision tree to graph network
-The following are the implemented steps used for transformation of the dataset. 
 
-1. Conversion of decision tree rules from  for each sample
+The following steps are implemented for transformation of the dataset. 
+
+1. Conversion of decision tree rules from for each sample
     - Serialization: Converting decision tree rules to csv files for each sample.
 
 ## 🧪 Formulaization / conversion of the decision - tree to nodes
@@ -31,15 +31,15 @@ We use $A--B$ to denote an edge between vertices $A$ and $B$ rather than the set
 
 ### Mathematical formulation
 
-
 ### Edge cases
 1. Every node should be connected to at least with a link node. Because, every node comes from root node.
 2. If there is a commonality between the nodes then there is a link.
 3. There can not be duplicate links in a system.
+
 ## Similar techniques
 
 ###  Conceptual graph analysis
-Developed by Grasser and Murachver in 1985 to get detailed knwoledge from computer science experts and found  away of representing it in a coherent fashion. There was a transformation of nodes an questions of the original method and have extended its application from information design to instructional design.j
+Developed by Grasser and Murachver in 1985 to get detailed knowledge from computer science experts and found away of representing it in a coherent fashion. There was a transformation of nodes an questions of the original method and have extended its application from information design to instructional design.
 
 #### Assumptions
 1. Expert knowledge can be gained through structured and unstructured interview.

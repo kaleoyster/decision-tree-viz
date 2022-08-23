@@ -1,32 +1,32 @@
 <h1 align='center'>
- 🌲 Exploring the rules of the decision tree 🌲
+  Exploring the rules of the decision tree using Graph objects
 </h1>
 
 ![Network of decision tree]()
 
-- **Big idea** -- Machine learning models are difficult to understand. 
-- **Small idea** -- Specifically, in understanding large decision tree models, "How the rules affect the the entity" is not possible right now with complex models.
-- **Birds eye view of the idea** --  We plan to undo the complexity of the large decision tree model and explain what it means to make for the rest of the entities.
-- **Technical details** --  Train a complex dataset (NBI) simple machine learning model such as decision tree. Using graphs / networks understand the rules of the decision tree.
-- **What's next** -- There are future directions to this methods, some of them are inspired by the limitations.
+- **Big idea** -- Machine learning models are explain and interpret.
+- **Small idea** -- Specifically, in understanding the insights offered by the large decision tree models, such as, "How the rules affect the the entity" is challenging with complex models.
+- **Birds eye view of the idea** -- We plan to undo the complexity of the large decision tree model and explain the relationship of between the insight within the model with respect to the data. 
+- **Technical details** --  Train a dataset on a simple machine learning model such as decision tree. Using graphs / networks understand the rules of the decision tree.
+- **What's next** -- Often, there a networks results in formation of various clusters. The future direction can explore the possibilities in identifying similarity between the structures.
+
 
 ### 🎯 Objective
-- The objective of this research study is to develop a method for explaining large decision rules and how it affects bridges. 
-* We specifically try apply this technique on the National Bridge Inventory dataset.
+- The objective of this research study is to develop a method for explaining large decision rules and how it affects data samples. 
+* We specifically try apply this technique on the IRIS dataset.
 
 ### 💪 Challenge
-- In the NBI dataset, it is a **challenge** to identify maintainance patterns and various factors that interact in explaining bridge performance and maintenance. Because, the use of `reconstruction_year` does not provide an valuable information about the type of repair or reconstruction done.
+- In the real world dataset, it is a **challenge** to identify patterns and various factors that interact in explaining sample and decision made for each sample. 
 
 ### 🧪 Solution
-- To address this challenge we can use bridge intervention matrix, that utilizes the bridge intervention matrix for `deck` to identify various types of intervention depending on the probability of the transition.
 - With large set of complicated rules, it is difficult to understand the interactions.
 - We use explainable methods such as decision trees.
 - Identify the commonality between the bridges by visualizing the rules between the trees.
 
-![Deck Bridge Intervention Matrix]()
 
 ### 🎬 Getting started
 
+The following are the steps to setup this project:
 
 ####  Clone
 ```zsh
