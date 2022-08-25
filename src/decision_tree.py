@@ -141,7 +141,7 @@ def print_decision_paths(clf, X_test, features, labels):
                      'node': nodeList,
                      'sampleId': sampleIdList,
                      'featureId': featureIdList,
-                     'valueId': valueList,
+                     #'valueId': valueList,
                      'inequality': inequalityList,
                      'threshold': thresholdList,
                      'labels': labelList
