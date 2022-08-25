@@ -48,7 +48,10 @@
         <button onclick='stop()'> Stop Visualization </button>
         <svg id="svgID" width="1000", height="1000"> </svg>
         <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script type="module" src="./data.js"></script>
+
         <script>
+            //import { generateData } from './data.js';
 
             // (Generate) -> draw() -> generateForBridges() -> 
             function draw(){
@@ -61,7 +64,6 @@
                 //simulation.stop();
                 const scale = d3.scaleOrdinal(d3.schemeCategory10)
                 const color = d => scale(d.group)
-    
                 var svg =  d3.select("svg");
                 var width = svg.attr("width");
                 var height = svg.attr("height");
@@ -158,7 +160,7 @@
             function tooltip_node_in(event, d) {
                 return tooltip_node
                     .html(
-                        `<h4>${d.id}</h4>`
+                        `<h4> ${d.id} </h4>`
                     )
                     .style("visibility", "visible")
                     .style("top", event.pageY + "px")
@@ -234,6 +236,8 @@
             }
  
             function dataForBridges(){
+                // var graphData = generateData();
+
                var graphData = {
                     nodes: [
                             {"id":'Bridge 1', "group":1},
@@ -272,13 +276,13 @@
                 };
 
                 drawUtility(graphData);
-                //fetch('./data/network.json')
-                //   .then(response => response.json())
-                //   .then(result => {                                   
-                //                   drawUtility(result);
-                //               });
+                fetch('./data/network.json')
+                   .then(response => response.json())
+                   .then(result => {                                   
+                                    drawUtility(result);
+                               });
             
-           // let data1 = data;
+            // let data1 = data;
             //console.log(data1);
             //console.log(data1.length);
             //return graphData;
