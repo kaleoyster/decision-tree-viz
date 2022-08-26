@@ -135,7 +135,6 @@ def print_decision_paths(clf, X_test, features, labels):
                     thresholdList.append(threshold[node_id])
                     labelList.append(label)
 
-
     #sys.stdout = oStdout
     data = pd.DataFrame({
                      'node': nodeList,
@@ -182,7 +181,6 @@ def main():
                          axis=0)
 
     features = iris['feature_names']
-
     label_dictionary = {
         0:'setosa',
         1:'versicolor',
