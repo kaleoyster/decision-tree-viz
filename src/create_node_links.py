@@ -21,7 +21,7 @@ def create_node_dictionary(paths):
     dictionary = defaultdict(list)
     new_nodes = []
     node_labels = defaultdict()
-    for row in paths[:10]:
+    for row in paths[:]:
         label = row[-1]
         rule = row[3:-1]
         rule = ' '.join(rule)
@@ -36,7 +36,6 @@ def create_node_dictionary(paths):
                 'group': int(group_val)
                }
         new_nodes.append(temp)
-    print(new_nodes)
     return nodes, new_nodes, dictionary
 
 def compare_rules(rule1, rule2):
@@ -55,11 +54,12 @@ def create_links(nodes, dictionary):
                 rule1 = dictionary.get(bridge1)
                 rule2 = dictionary.get(bridge2)
                 common_rules = compare_rules(rule1, rule2)
+                print(common_rules)
                 if common_rules > 0:
                     link = {
                         'source':bridge1,
                         'target':bridge2,
-                        'value':common_rules
+                        'value':common_rules,
                         }
                     links.append(link)
     return links
@@ -76,6 +76,7 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
+    print(network)
 
     with open('network.json', 'w') as json_file:
         json.dump(network, json_file)
