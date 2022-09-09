@@ -1,0 +1,13 @@
+const fs = require("fs");
+var d3 = require("d3");
+
+fs.readFile("./path.csv",(err, data) => {
+    if (err){
+        console.log(err);
+    }
+    console.log(data.toString());
+});
+
+console.log("last line");
+console.log(d3.version);
+
