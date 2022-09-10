@@ -9,8 +9,13 @@ from tqdm import tqdm
 from collections import defaultdict
 
 def read_file():
+    """
+    Description:
+        returns file path given filename
+    """
+    path = 'path.csv'
     all_paths = list()
-    with open("path.csv", 'r') as csv_file:
+    with open(path, 'r') as csv_file:
         paths = csv.reader(csv_file, delimiter = ',')
         header = next(paths)
         for row in paths:
@@ -18,6 +23,10 @@ def read_file():
     return all_paths
 
 def create_node_dictionary(paths):
+    """
+    Description:
+        return nodes, new_nodes, and dictionary
+    """
     dictionary = defaultdict(list)
     new_nodes = []
     node_labels = defaultdict()
@@ -39,12 +48,20 @@ def create_node_dictionary(paths):
     return nodes, new_nodes, dictionary
 
 def compare_rules(rule1, rule2):
+    """
+    Description:
+        return common_rules
+    """
     rule1 = set(rule1)
     rule2 = set(rule2)
     common_rules = rule1.intersection(rule2)
     return len(common_rules)
 
 def create_links(nodes, dictionary):
+    """
+    Description:
+        Given nodes and dictionary return links
+    """
     links = list()
     for node1 in tqdm(range(0, len(nodes))):
         for node2 in range(0, len(nodes)):
@@ -65,6 +82,10 @@ def create_links(nodes, dictionary):
     return links
 
 def create_json(nodes, links):
+    """
+    Description:
+        Given nodes and links return json
+    """
     network = {
                'nodes':nodes,
                'links':links
@@ -84,7 +105,7 @@ def main():
     #fields = ['source', 'target', 'count']
     #with open('links.csv', 'w') as f:
     #    write = csv.writer(f)
-    #    #write.writerow(fields)
+    #    write.writerow(fields)
     #    write.writerows(links)
 
 if __name__ == '__main__':
