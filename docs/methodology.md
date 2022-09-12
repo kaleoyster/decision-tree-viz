@@ -2,7 +2,6 @@
      Methodology 
 </h1>
 
-![Methodology]()
 <p center='align'> <b>Figure 1: Research methodology of the study</b></p>
 
 ## Data 
