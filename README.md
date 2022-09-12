@@ -2,8 +2,6 @@
   Exploring the rules of the decision tree using Graph objects
 </h1>
 
-![Network of decision tree]()
-
 - **Big idea** -- Machine learning models are explain and interpret.
 - **Small idea** -- Specifically, in understanding the insights offered by the large decision tree models, such as, "How the rules affect the the entity" is challenging with complex models.
 - **Birds eye view of the idea** -- We plan to undo the complexity of the large decision tree model and explain the relationship of between the insight within the model with respect to the data. 
