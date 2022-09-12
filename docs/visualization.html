@@ -48,7 +48,10 @@
         <button onclick='stop()'> Stop Visualization </button>
         <svg id="svgID" width="1000", height="1000"> </svg>
         <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script type="module" src="./data.js"></script>
+
         <script>
+            //import { generateData } from './data.js';
 
             // (Generate) -> draw() -> generateForBridges() -> 
             function draw(){
@@ -61,7 +64,6 @@
                 //simulation.stop();
                 const scale = d3.scaleOrdinal(d3.schemeCategory10)
                 const color = d => scale(d.group)
-    
                 var svg =  d3.select("svg");
                 var width = svg.attr("width");
                 var height = svg.attr("height");
@@ -111,7 +113,6 @@
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end", dragended);
-    
                 nodes.call(drag);
 
             // new
@@ -140,6 +141,7 @@
                     .html(
                         `<h4> Source: ${d.source.id} </h4>
                          <h4> Target: ${d.target.id} </h4>
+                         <h4> Rule: ${d.rule} </h4>
                          <h4> Target: ${d.value} </h4>`
                     )
                     .style("visibility", "visible")
@@ -150,16 +152,14 @@
             function tooltip_out() {
                 return tooltip
                     .transition()
-                    .duration(100)
+                    .duration(200)
                     .style("visibility", "hidden");
             }
 
             // new (node)
             function tooltip_node_in(event, d) {
                 return tooltip_node
-                    .html(
-                        `<h4>${d.id}</h4>`
-                    )
+                    .html(`<h4> ${d.id} </h4>`)
                     .style("visibility", "visible")
                     .style("top", event.pageY + "px")
                     .style("left", event.pageX + "px");
@@ -169,7 +169,7 @@
             function tooltip_node_out() {
                 return tooltip_node
                     .transition()
-                    .duration(100)
+                    .duration(200)
                     .style("visibility", "hidden");
             }
                                 
@@ -234,6 +234,8 @@
             }
  
             function dataForBridges(){
+                // var graphData = generateData();
+
                var graphData = {
                     nodes: [
                             {"id":'Bridge 1', "group":1},
@@ -247,38 +249,44 @@
                     links: [
                         {"source":'Bridge 1',
                          "target":'Bridge 2', 
-                         "value": 5},
+                         "rule": 'rule 1',
+                         "value": 1},
 
                         {"source":'Bridge 2', 
                          "target":'Bridge 3', 
-                         "value": 7},
+                         "rule": 'rule 2',
+                         "value": 1},
 
                         {"source":'Bridge 3', 
                          "target":'Bridge 5', 
-                         "value": 8},
+                         "rule": 'rule 2',
+                         "value": 1},
 
                         {"source":'Bridge 4', 
                          "target":'Bridge 5', 
-                         "value": 2},
+                         "rule": 'rule 2',
+                         "value": 3},
 
                         {"source":'Bridge 5', 
                          "target":'Bridge 6', 
-                         "value": 15},
+                         "rule":'rule 1',
+                         "value": 3},
 
                         {"source":'Bridge 6', 
                          "target":'Bridge 1', 
-                         "value": 10},
+                         "rule": 'rule 1',
+                         "value": 2},
                     ]
                 };
 
                 drawUtility(graphData);
-                //fetch('./data/network.json')
-                //   .then(response => response.json())
-                //   .then(result => {                                   
-                //                   drawUtility(result);
-                //               });
+                fetch('./data/network.json')
+                   .then(response => response.json())
+                   .then(result => {                                   
+                                    drawUtility(result);
+                               });
             
-           // let data1 = data;
+            // let data1 = data;
             //console.log(data1);
             //console.log(data1.length);
             //return graphData;

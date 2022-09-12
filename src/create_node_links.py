@@ -9,8 +9,13 @@ from tqdm import tqdm
 from collections import defaultdict
 
 def read_file():
+    """
+    Description:
+        returns file path given filename
+    """
+    path = 'path.csv'
     all_paths = list()
-    with open("path.csv", 'r') as csv_file:
+    with open(path, 'r') as csv_file:
         paths = csv.reader(csv_file, delimiter = ',')
         header = next(paths)
         for row in paths:
@@ -18,10 +23,14 @@ def read_file():
     return all_paths
 
 def create_node_dictionary(paths):
+    """
+    Description:
+        return nodes, new_nodes, and dictionary
+    """
     dictionary = defaultdict(list)
     new_nodes = []
     node_labels = defaultdict()
-    for row in paths[:10]:
+    for row in paths[:]:
         label = row[-1]
         rule = row[3:-1]
         rule = ' '.join(rule)
@@ -36,16 +45,23 @@ def create_node_dictionary(paths):
                 'group': int(group_val)
                }
         new_nodes.append(temp)
-    print(new_nodes)
     return nodes, new_nodes, dictionary
 
 def compare_rules(rule1, rule2):
+    """
+    Description:
+        return common_rules
+    """
     rule1 = set(rule1)
     rule2 = set(rule2)
     common_rules = rule1.intersection(rule2)
     return len(common_rules)
 
 def create_links(nodes, dictionary):
+    """
+    Description:
+        Given nodes and dictionary return links
+    """
     links = list()
     for node1 in tqdm(range(0, len(nodes))):
         for node2 in range(0, len(nodes)):
@@ -55,16 +71,21 @@ def create_links(nodes, dictionary):
                 rule1 = dictionary.get(bridge1)
                 rule2 = dictionary.get(bridge2)
                 common_rules = compare_rules(rule1, rule2)
+                print(common_rules)
                 if common_rules > 0:
                     link = {
                         'source':bridge1,
                         'target':bridge2,
-                        'value':common_rules
+                        'value':common_rules,
                         }
                     links.append(link)
     return links
 
 def create_json(nodes, links):
+    """
+    Description:
+        Given nodes and links return json
+    """
     network = {
                'nodes':nodes,
                'links':links
@@ -76,6 +97,7 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
+    print(network)
 
     with open('network.json', 'w') as json_file:
         json.dump(network, json_file)
@@ -83,9 +105,8 @@ def main():
     #fields = ['source', 'target', 'count']
     #with open('links.csv', 'w') as f:
     #    write = csv.writer(f)
-    #    #write.writerow(fields)
+    #    write.writerow(fields)
     #    write.writerows(links)
 
 if __name__ == '__main__':
     main()
-
