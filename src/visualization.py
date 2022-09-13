@@ -16,6 +16,7 @@ import pandas as pd
 def read_csv_file(path):
     """
     Description:
+        Given path read new files
     """
     _df = pd.read_csv(path, index_col=None)
     return _df
@@ -23,6 +24,7 @@ def read_csv_file(path):
 def create_map(list_of_columns):
     """
     Description:
+        Given new list of columns
     """
     column_map = defaultdict()
     for index, column in enumerate(list_of_columns):
