@@ -1,3 +1,6 @@
+//d3.csv('./network.json', function(data){
+//    console.log(data);
+//});
 
 function draw(){
     var graphData = dataForBridges();
@@ -157,6 +160,20 @@ function dataForBridges(){
              "value": 2},
         ]
     };
+
+    async function loadNames(){
+        const response = await fetch('./network.json');
+        let names = await response.json();
+        names = JSON.stringify(names);
+        names = JSON.parse(names);
+        console.log(names.nodes);
+        return names;
+
+    }
+    //#loadNames();
+
+    let names = loadNames();
+    console.log(names);
 
 return graphData;
 }
