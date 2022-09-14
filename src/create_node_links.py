@@ -71,7 +71,6 @@ def create_links(nodes, dictionary):
                 rule1 = dictionary.get(bridge1)
                 rule2 = dictionary.get(bridge2)
                 common_rules = compare_rules(rule1, rule2)
-                print(common_rules)
                 if common_rules > 0:
                     link = {
                         'source':bridge1,
@@ -90,23 +89,18 @@ def create_json(nodes, links):
                'nodes':nodes,
                'links':links
               }
-    return json.dumps(network)
+    return network
 
 def main():
     all_paths = read_file()
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    print(network)
-
-    with open('network.json', 'w') as json_file:
-        json.dump(network, json_file)
-
-    #fields = ['source', 'target', 'count']
-    #with open('links.csv', 'w') as f:
-    #    write = csv.writer(f)
-    #    write.writerow(fields)
-    #    write.writerows(links)
+    path = '../docs/data' + '/' + 'network.json'
+    # For source testing
+    # path = 'network.json'
+    with open(path, 'w+') as json_file:
+        json.dump(network, json_file, indent=4)
 
 if __name__ == '__main__':
     main()
