@@ -1,10 +1,19 @@
-//d3.csv('./network.json', function(data){
+//d3.json('./network.json', function(data){
+//    console.log('reading data');
 //    console.log(data);
 //});
-
+//
 function draw(){
-    var graphData = dataForBridges();
-    drawUtility(graphData);
+
+    d3.json('./network.json', function(graphData){
+    console.log('reading data');
+    console.log(graphData);
+    drawUtility(graphData)
+});
+        
+
+ //   var graphData = dataForBridges();
+  //  drawUtility(graphData);
     }
 
 function drawUtility(graphData) {
@@ -138,7 +147,6 @@ function dataForBridges(){
              "target":'Bridge 2', 
              "value": 1},
 
-
             {"source":'Bridge 2', 
              "target":'Bridge 3', 
              "value": 1},
@@ -166,14 +174,14 @@ function dataForBridges(){
         let names = await response.json();
         names = JSON.stringify(names);
         names = JSON.parse(names);
-        console.log(names.nodes);
+        //console.log(names.nodes);
         return names;
 
     }
     //#loadNames();
 
     let names = loadNames();
-    console.log(names);
+    //console.log(names);
 
 return graphData;
 }
