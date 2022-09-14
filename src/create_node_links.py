@@ -96,55 +96,9 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-   # network = {
-   #            "nodes": [
-   #            {"id":"Bridge 1", "group":1},
-   #            {"id":"Bridge 2", "group":2},
-   #            {"id":"Bridge 3", "group":3},
-   #            {"id":"Bridge 4", "group":2},
-   #            {"id":"Bridge 5", "group":1},
-   #            {"id":"Bridge 6", "group":1},
-   #            {"id":"Bridge 8", "group":2}
-   #            ],
-
-   #        "links": [
-   #            {"source":"Bridge 1",
-   #             "target":"Bridge 2",
-   #             "value": 0},
-
-   #            {"source":"Bridge 8",
-   #             "target":"Bridge 2",
-   #             "value": 1},
-
-   #            {"source":"Bridge 2",
-   #             "target":"Bridge 3",
-   #             "value": 1},
-
-   #            {"source":"Bridge 3",
-   #             "target":"Bridge 5",
-   #             "value": 8},
-
-   #            {"source":"Bridge 4",
-   #             "target":"Bridge 5",
-   #             "value": 2},
-
-   #            {"source":"Bridge 5",
-   #             "target":"Bridge 2",
-   #             "value": 10},
-
-   #            {"source":"Bridge 5",
-   #             "target":"Bridge 1",
-   #             "value": 2}
-   #         ]}
-
-    with open('network.json', 'w') as json_file:
+    path = '../docs/data' + '/' + 'network.json'
+    with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
-
-    #fields = ['source', 'target', 'count']
-    #with open('links.csv', 'w') as f:
-    #    write = csv.writer(f)
-    #    write.writerow(fields)
-    #    write.writerows(links)
 
 if __name__ == '__main__':
     main()
