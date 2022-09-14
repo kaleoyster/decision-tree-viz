@@ -71,7 +71,6 @@ def create_links(nodes, dictionary):
                 rule1 = dictionary.get(bridge1)
                 rule2 = dictionary.get(bridge2)
                 common_rules = compare_rules(rule1, rule2)
-                print(common_rules)
                 if common_rules > 0:
                     link = {
                         'source':bridge1,
@@ -90,17 +89,56 @@ def create_json(nodes, links):
                'nodes':nodes,
                'links':links
               }
-    return json.dumps(network)
+    return network
 
 def main():
     all_paths = read_file()
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    print(network)
+   # network = {
+   #            "nodes": [
+   #            {"id":"Bridge 1", "group":1},
+   #            {"id":"Bridge 2", "group":2},
+   #            {"id":"Bridge 3", "group":3},
+   #            {"id":"Bridge 4", "group":2},
+   #            {"id":"Bridge 5", "group":1},
+   #            {"id":"Bridge 6", "group":1},
+   #            {"id":"Bridge 8", "group":2}
+   #            ],
+
+   #        "links": [
+   #            {"source":"Bridge 1",
+   #             "target":"Bridge 2",
+   #             "value": 0},
+
+   #            {"source":"Bridge 8",
+   #             "target":"Bridge 2",
+   #             "value": 1},
+
+   #            {"source":"Bridge 2",
+   #             "target":"Bridge 3",
+   #             "value": 1},
+
+   #            {"source":"Bridge 3",
+   #             "target":"Bridge 5",
+   #             "value": 8},
+
+   #            {"source":"Bridge 4",
+   #             "target":"Bridge 5",
+   #             "value": 2},
+
+   #            {"source":"Bridge 5",
+   #             "target":"Bridge 2",
+   #             "value": 10},
+
+   #            {"source":"Bridge 5",
+   #             "target":"Bridge 1",
+   #             "value": 2}
+   #         ]}
 
     with open('network.json', 'w') as json_file:
-        json.dump(network, json_file)
+        json.dump(network, json_file, indent=4)
 
     #fields = ['source', 'target', 'count']
     #with open('links.csv', 'w') as f:
