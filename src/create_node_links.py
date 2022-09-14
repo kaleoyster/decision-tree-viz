@@ -97,6 +97,8 @@ def main():
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
     path = '../docs/data' + '/' + 'network.json'
+    # For source testing
+    # path = 'network.json'
     with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
 

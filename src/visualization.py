@@ -42,9 +42,6 @@ def main():
     _df = read_csv_file(path)
     for index, row in _df.iterrows():
         print(row)
-    #print(_df)
-    #column_map = create_map(list_of_columns)
-    #df['featureName'] = df['featureId'].map(column_map)
 
 if __name__=='__main__':
     main()
