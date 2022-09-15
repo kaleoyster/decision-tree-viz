@@ -9,10 +9,10 @@
 - **What's next** -- Often, there a networks results in formation of various clusters. The future direction can explore the possibilities in identifying similarity between the structures.
 
 ### 🎯 Objective
-- The objective of this research study is to develop a method for explaining large decision rules and how it affects data samples. We demonstrate our techniques with the use of IRIS dataset. 
+- The objective of this research study is to develop a method for intepreting the large decision rules and how it affects data samples. We demonstrate our techniques with the use of IRIS dataset. 
 
 ### 💪 Challenge
-- In the real world dataset, it is a **challenge** to identify patterns and various factors that interact in explaining sample and decision made for each sample. 
+- In the real world dataset, it is a **challenge** to identify patterns and various factors that interact in explaining the decisions made for specific instance.
 
 ### 🧪 Solution
 - With large set of complicated rules, it is difficult to understand the interactions.
