@@ -3,7 +3,7 @@
 </h1>
 
 - **Big idea** -- Machine learning models are difficult to explain and interpret.
-- **Small idea** -- expecially, in understanding the insights offered by the large decision tree models, such as, "How the rules affect the the entity" is challenging with complex models.
+- **Small idea** -- Especially, in understanding the insights offered by the large decision tree models, such as, "How the rules affect the the entity" is challenging with complex models.
 - **Birds eye view of the idea** -- We plan to undo the complexity of the large decision tree model and explain the relationship of between the insight within the model with respect to the data. 
 - **Technical details** --  Train a dataset on a simple machine learning model such as decision tree. Using graphs / networks understand the rules of the decision tree.
 - **What's next** -- Often, there a networks results in formation of various clusters. The future direction can explore the possibilities in identifying similarity between the structures.
