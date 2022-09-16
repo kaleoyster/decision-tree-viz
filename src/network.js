@@ -7,7 +7,7 @@ var width = svg.attr("width");
 var height = svg.attr("height");
 
 // import dataset
-d3.json('network.json').then(function(graphData) {
+d3.json('network_sample.json').then(function(graphData) {
     console.log("Printing nodes");
     console.log(graphData);
 
@@ -91,6 +91,7 @@ d3.json('network.json').then(function(graphData) {
                 <h4>Target: ${d.target.id}</h4>
                 <br>
                 <h5>(Relation: source value, target value)</h5>
+                <h5>Rules: ${d.source.rules}, ${d.target.rules}</h5>
                 `
                 )
                 .style("visibility", "visible")
