@@ -88,16 +88,16 @@ d3.json('network_sample.json').then(function(graphData) {
             return tooltip
                 .html(
                 `<h4>Source: ${d.source.id}</h4>
-                <h4>Target: ${d.target.id}</h4>
-                <br>
-                <h5>(Relation: source value, target value)</h5>
-                <h5>Rules: ${d.source.rules}, ${d.target.rules}</h5>
+                 <h4>Target: ${d.target.id}</h4>
+                 <br>
+                 <h5>(Relation: source value, target value)</h5>
+                 <h5>Rules: ${d.source.rules}, ${d.target.rules}</h5>
                 `
                 )
                 .style("visibility", "visible")
                 .style("top", event.pageY + "px")
                 .style("left", event.pageX + "px");
-         }
+          }
 
     function tooltip_out() {
             return tooltip

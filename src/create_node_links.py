@@ -27,9 +27,11 @@ def create_node_dictionary(paths):
     Description:
         return nodes, new_nodes, and dictionary
     """
-    dictionary = defaultdict(list)
     new_nodes = []
     node_labels = defaultdict()
+
+    # Store rules 
+    dictionary = defaultdict(list)
     for row in paths[:]:
         label = row[-1]
         rule = row[3:-1]
@@ -38,12 +40,14 @@ def create_node_dictionary(paths):
         dictionary[node].append(rule)
         node_labels[node] = label
     nodes = list(dictionary.keys())
-
     for node in nodes:
         group_val = node_labels[node]
-        temp = {'id': node,
-                'group': int(group_val)
-               }
+        rule = dictionary[node]
+        temp = {
+                  'id': node,
+                  'group': int(group_val), # Class label of the IRIS flower
+                  'rule': rule
+                }
         new_nodes.append(temp)
     return nodes, new_nodes, dictionary
 
@@ -55,7 +59,7 @@ def compare_rules(rule1, rule2):
     rule1 = set(rule1)
     rule2 = set(rule2)
     common_rules = rule1.intersection(rule2)
-    return len(common_rules)
+    return len(common_rules), list(common_rules)
 
 def create_links(nodes, dictionary):
     """
@@ -70,12 +74,13 @@ def create_links(nodes, dictionary):
             if node1 != node2:
                 rule1 = dictionary.get(bridge1)
                 rule2 = dictionary.get(bridge2)
-                common_rules = compare_rules(rule1, rule2)
-                if common_rules > 0:
+                total_count, rules = compare_rules(rule1, rule2)
+                if total_count > 0:
                     link = {
                         'source':bridge1,
                         'target':bridge2,
-                        'value':common_rules,
+                        'value':total_count,
+                        'common rules': rules
                         }
                     links.append(link)
     return links
@@ -96,9 +101,10 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    path = '../docs/data' + '/' + 'network.json'
+    print(links)
+    #path = '../docs/data' + '/' + 'network.json'
     # For source testing
-    # path = 'network.json'
+    path = 'network.json'
     with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
 
