@@ -59,6 +59,8 @@ d3.json('network.json').then(function(graphData) {
     .on("end", dragended);
     
     nodes.call(drag);
+
+    //define tool tip
     
     function ticked(){
         texts
