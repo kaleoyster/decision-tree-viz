@@ -5,7 +5,7 @@ var svg =  d3.select("svg");
 var width = svg.attr("width");
 var height = svg.attr("height");
  
-d3.json('network_sample.json').then(function(graphData) {
+d3.json('./data/network.json').then(function(graphData) {
     console.log("Printing nodes");
     console.log(graphData);
 
@@ -25,10 +25,8 @@ var links = svg
     .data(graphData.links)
     .enter()
     .append("line")
-    .attr("stroke-width", function(d) {return (d.value)})
-    .style("stroke", "orange")
-    .on("mouseover", tooltip_in)
-    .on("mouseout", tooltip_out);
+    .attr("stroke-width", 3)
+    .style("stroke", "orange");
 
 var nodes = svg
     .append("g")
@@ -37,9 +35,7 @@ var nodes = svg
     .enter()
     .append("circle")
     .attr("r", 10)
-    .attr("fill", color)
-    .on("mouseover", tooltip_node_in)
-    .on("mouseout", tooltip_node_out);
+    .attr("fill", color);
 
 var texts = svg
     .append("g")
@@ -56,70 +52,6 @@ var drag = d3
     .on("end", dragended);
 
 nodes.call(drag);
-
-//define tool tip
-
-let tooltip = d3
-        .select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("visibility", "hidden")
-        .style("background-color", "grey")
-        .style("color", "white")
-        .style("text-shadow", "1px 1px 1px #000000")
-        .attr("class", "tooltip");
-
-let tooltip_node = d3
-        .select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("visibility", "hidden")
-        .style("background-color", "crimson")
-        .style("text-shadow", "1px 1px 1px #000000")
-        .attr("class", "tooltip_node");
-
-function tooltip_in(event, d) {
-        return tooltip
-            .html(
-            `<h4>Source: ${d.source.id}</h4>
-                <h4>Target: ${d.target.id}</h4>
-                <br>
-                 <h5>(Relation: source value, target value)</h5>
-            `
-            )
-            .style("visibility", "visible")
-            .style("top", event.pageY + "px")
-            .style("left", event.pageX + "px");
-          }
-
-function tooltip_out() {
-            return tooltip
-                    .transition()
-                    .duration(20)
-                    .style("visibility", "hidden");
-        }
-
-
-function tooltip_node_in(event, d) {
-            return tooltip_node
-                    .html(
-                        `<h4>${d.id}</h4>
-                        `
-                     )
-                     .style("visibility", "visible")
-                     .style("top", event.pageY + "px")
-                     .style("left", event.pageX + "px");
-        }
-
-
-function tooltip_node_out() {
-            return tooltip_node
-                .transition()
-                .duration(10)
-                .style("visibility", "hidden");
-        }
-
-
 function ticked(){
     texts
         .attr("x", d=>d.x)
