@@ -21,7 +21,7 @@
             "source": "1",
             "target": "2",
             "value": 10,
-            "commmon rules":[
+            "commmon_rules":[
                 "apple", "banana"
             ]
         }
