@@ -1,4 +1,4 @@
-// 
+//  Oridnal Scale 
 const scale = d3.scaleOrdinal(d3.schemeCategory10)
 const color = d => scale(d.group)
 
@@ -9,17 +9,17 @@ var height = svg.attr("height");
 // import dataset
 d3.json('network_sample.json').then(function(graphData) {
     console.log("Printing nodes");
-    console.log(graphData);
+    console.log(graphData.nodes);
 
     // define simulation
     var simulation = d3
         .forceSimulation(graphData.nodes)
         .force("charge", d3.forceManyBody().strength(-30))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("link", 
-            d3.forceLink(graphData.links).id(function(d){
+        .force("link", d3.forceLink(graphData.links).id(function(d){
                         return d.id;
                     }))
+        .alphaTarget(1)
         .on("tick", ticked);
    
     // define nodes 
@@ -41,7 +41,8 @@ d3.json('network_sample.json').then(function(graphData) {
     .data(graphData.links)
     .enter()
     .append("line")
-    .attr("stroke-width", 3)
+    //.attr("stroke-width",  function(d) { return (d.value)*10;})
+    .attr("stroke-width", 10)
     .style("stroke", "black")
     .on("mouseover", tooltip_in)
     .on("mouseout", tooltip_out);
@@ -110,12 +111,11 @@ d3.json('network_sample.json').then(function(graphData) {
             return tooltip_node
                     .html(
                         `<h4>${d.id}</h4>
-            <br>
-          `
-            )
-            .style("visibility", "visible")
-            .style("top", event.pageY + "px")
-            .style("left", event.pageX + "px");
+                        `
+                     )
+                     .style("visibility", "visible")
+                     .style("top", event.pageY + "px")
+                     .style("left", event.pageX + "px");
         }
 
     function tooltip_node_out() {

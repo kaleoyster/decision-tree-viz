@@ -19,41 +19,39 @@ var simulation = d3
     .alphaTarget(1) 
     .on("tick", ticked);
 
-
 var links = svg
-.append("g")
-.selectAll("line")
-.data(graphData.links)
-.enter()
-.append("line")
-.attr("stroke-width", 3)
-.style("stroke", "orange");
+    .append("g")
+    .selectAll("line")
+    .data(graphData.links)
+    .enter()
+    .append("line")
+    .attr("stroke-width", 3)
+    .style("stroke", "orange");
 
 var nodes = svg
-.append("g")
-.selectAll("circle")
-.data(graphData.nodes)
-.enter()
-.append("circle")
-.attr("r", 10)
-.attr("fill", color);
+    .append("g")
+    .selectAll("circle")
+    .data(graphData.nodes)
+    .enter()
+    .append("circle")
+    .attr("r", 10)
+    .attr("fill", color);
 
 var texts = svg
-.append("g")
-.selectAll("text")
-.data(graphData.nodes)
-.enter()
-.append("text")
-.text(d=>d.id);
+    .append("g")
+    .selectAll("text")
+    .data(graphData.nodes)
+    .enter()
+    .append("text")
+    .text(d=>d.id);
 
 var drag = d3
-.drag()
-.on("start", dragstarted)
-.on("drag", dragged)
-.on("end", dragended);
+    .drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended);
 
 nodes.call(drag);
-
 function ticked(){
     texts
         .attr("x", d=>d.x)
