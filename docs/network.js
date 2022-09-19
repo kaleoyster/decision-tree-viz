@@ -1,6 +1,5 @@
 const scale = d3.scaleOrdinal(d3.schemeCategory10)
 const color = d => scale(d.group)
-
 var svg =  d3.select("svg");
 var width = svg.attr("width");
 var height = svg.attr("height");
@@ -26,7 +25,7 @@ var links = svg
     .enter()
     .append("line")
     .attr("stroke-width", function(d) {return (d.value)})
-    .style("stroke", "orange")
+    .style("stroke", "black")
     .on("mouseover", tooltip_in)
     .on("mouseout", tooltip_out);
 
@@ -36,6 +35,7 @@ var nodes = svg
     .data(graphData.nodes)
     .enter()
     .append("circle")
+    //.attr("r", function(d) {return (d.group)})
     .attr("r", 10)
     .attr("fill", color)
     .on("mouseover", tooltip_node_in)
@@ -58,7 +58,6 @@ var drag = d3
 nodes.call(drag);
 
 //define tool tip
-
 let tooltip = d3
         .select("body")
         .append("div")
@@ -82,9 +81,9 @@ function tooltip_in(event, d) {
         return tooltip
             .html(
             `<h4>Source: ${d.source.id}</h4>
-                <h4>Target: ${d.target.id}</h4>
-                <br>
-                 <h5>(Relation: source value, target value)</h5>
+            <h4>Target: ${d.target.id}</h4>
+            <br>
+            <h5>(Relation: source value, target value)</h5>
             `
             )
             .style("visibility", "visible")
@@ -103,7 +102,10 @@ function tooltip_out() {
 function tooltip_node_in(event, d) {
             return tooltip_node
                     .html(
-                        `<h4>${d.id}</h4>
+                        `<h4>Sample: ${d.id}</h4>
+                         <br>
+                         <h5>Rules:</h5>
+                         <h4>${d.rules}</h4>
                         `
                      )
                      .style("visibility", "visible")
