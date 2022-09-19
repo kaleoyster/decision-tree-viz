@@ -11,7 +11,7 @@ from collections import defaultdict
 def read_file():
     """
     Description:
-        returns file path given filename
+        Returns file path given filename
     """
     path = 'path.csv'
     all_paths = list()
@@ -25,7 +25,7 @@ def read_file():
 def create_node_dictionary(paths):
     """
     Description:
-        return nodes, new_nodes, and dictionary
+        Return nodes, new_nodes, and dictionary
     """
     new_nodes = []
     node_labels = defaultdict()
@@ -54,7 +54,7 @@ def create_node_dictionary(paths):
 def compare_rules(rule1, rule2):
     """
     Description:
-        return common_rules
+        Return common_rules
     """
     rule1 = set(rule1)
     rule2 = set(rule2)
@@ -117,9 +117,10 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    #path = '../docs/data' + '/' + 'network.json'
+    path = '../docs/data' + '/' + 'network.json'
+    print(network)
     # For source testing
-    path = 'network.json'
+    #path = 'network.json'
     with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
 
