@@ -98,10 +98,24 @@ def create_json(nodes, links):
 
 def main():
     all_paths = read_file()
-    nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
+
+    ## filter data-sets here to get either the 
+    filter_sample = ['332',
+                     '335',
+                     '336',
+                     '337'
+                    ]
+
+    filter_paths = []
+    for sample in all_paths:
+        sam_id = sample[0]
+        if sam_id in filter_sample:
+            filter_paths.append(sample)
+
+    nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    print(links)
+    print(network)
     #path = '../docs/data' + '/' + 'network.json'
     # For source testing
     path = 'network.json'
