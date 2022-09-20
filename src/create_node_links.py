@@ -11,7 +11,7 @@ from collections import defaultdict
 def read_file():
     """
     Description:
-        returns file path given filename
+        Returns file path given filename
     """
     path = 'path.csv'
     all_paths = list()
@@ -25,7 +25,7 @@ def read_file():
 def create_node_dictionary(paths):
     """
     Description:
-        return nodes, new_nodes, and dictionary
+        Return nodes, new_nodes, and dictionary
     """
     new_nodes = []
     node_labels = defaultdict()
@@ -54,7 +54,7 @@ def create_node_dictionary(paths):
 def compare_rules(rule1, rule2):
     """
     Description:
-        return common_rules
+        Return common_rules
     """
     rule1 = set(rule1)
     rule2 = set(rule2)
@@ -98,13 +98,29 @@ def create_json(nodes, links):
 
 def main():
     all_paths = read_file()
-    nodes, new_nodes, dictionary = create_node_dictionary(all_paths)
+
+    ## filter data-sets here to get either the 
+        # TODO: Convert this into a function
+    # Return the structure number by filtering through their attributes
+    filter_sample = ['332',
+                     '335',
+                     '336',
+                     '337'
+                    ]
+
+    filter_paths = []
+    for sample in all_paths:
+        sam_id = sample[0]
+        if sam_id in filter_sample:
+            filter_paths.append(sample)
+
+    nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    print(links)
-    #path = '../docs/data' + '/' + 'network.json'
+    path = '../docs/data' + '/' + 'network.json'
+    print(network)
     # For source testing
-    path = 'network.json'
+    #path = 'network.json'
     with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
 
