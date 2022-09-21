@@ -7,7 +7,7 @@ var width = svg.attr("width");
 var height = svg.attr("height");
 
 // import dataset
-d3.json('network_sample.json').then(function(graphData) {
+d3.json('network.json').then(function(graphData) {
     console.log("Printing nodes");
     console.log(graphData.nodes);
 

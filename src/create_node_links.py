@@ -98,7 +98,6 @@ def create_json(nodes, links):
 
 def main():
     all_paths = read_file()
-
     ## filter data-sets here to get either the 
         # TODO: Convert this into a function
     # Return the structure number by filtering through their attributes
@@ -117,10 +116,10 @@ def main():
     nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
-    path = '../docs/data' + '/' + 'network.json'
+    #path = '../docs/data' + '/' + 'network.json'
     print(network)
     # For source testing
-    #path = 'network.json'
+    path = 'network.json'
     with open(path, 'w+') as json_file:
         json.dump(network, json_file, indent=4)
 
