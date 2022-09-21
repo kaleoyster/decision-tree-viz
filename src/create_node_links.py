@@ -101,15 +101,27 @@ def main():
     ## filter data-sets here to get either the 
         # TODO: Convert this into a function
     # Return the structure number by filtering through their attributes
-    filter_sample = ['332',
-                     '335',
-                     '336',
-                     '337'
+    filter_sample = ['129',
+                     '128',
+                     '95',
+                     '75',
+                     '25',
+                     '11',
+                     '7',
+                     '3',
+                     '2',
+                     '1',
+                     '123',
+                     '111',
+                     '85',
+                     '77',
+                     '65',
+                     '53'
                     ]
 
     filter_paths = []
     for sample in all_paths:
-        sam_id = sample[0]
+        sam_id = sample[2]
         if sam_id in filter_sample:
             filter_paths.append(sample)
 

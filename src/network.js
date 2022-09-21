@@ -42,7 +42,7 @@ d3.json('network.json').then(function(graphData) {
     .enter()
     .append("line")
     //.attr("stroke-width",  function(d) { return (d.value)*10;})
-    .attr("stroke-width", 10)
+    .attr("stroke-width", function(d) {return (d.value)})
     .style("stroke", "black")
     .on("mouseover", tooltip_in)
     .on("mouseout", tooltip_out);
