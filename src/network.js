@@ -14,11 +14,12 @@ d3.json('network.json').then(function(graphData) {
     // define simulation
     var simulation = d3
         .forceSimulation(graphData.nodes)
-        .force("charge", d3.forceManyBody().strength(-30))
+        .force("charge", d3.forceManyBody().strength(-200))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("link", d3.forceLink(graphData.links).id(function(d){
-                        return d.id;
-                    }))
+        .force("link", d3.forceLink(graphData.links).id(function(d)         {
+                    return d.id;
+                    }).distance(200))
+        .force("collide",d3.forceCollide().strength(0).radius(0))
         .alphaTarget(1)
         .on("tick", ticked);
    
@@ -41,7 +42,6 @@ d3.json('network.json').then(function(graphData) {
     .data(graphData.links)
     .enter()
     .append("line")
-    //.attr("stroke-width",  function(d) { return (d.value)*10;})
     .attr("stroke-width", function(d) {return (d.value)})
     .style("stroke", "black")
     .on("mouseover", tooltip_in)
@@ -91,8 +91,8 @@ d3.json('network.json').then(function(graphData) {
                 `<h4>Source: ${d.source.id}</h4>
                  <h4>Target: ${d.target.id}</h4>
                  <br>
-                 <h5>(Relation: source value, target value)</h5>
-                 <h5>Rules: ${d.source.rules}, ${d.target.rules}</h5>
+                 <h5> (Relation: source value, target value) </h5>
+                 <h5> Rules: ${d.source.rules}, ${d.target.rules} </h5>
                 `
                 )
                 .style("visibility", "visible")
@@ -110,7 +110,8 @@ d3.json('network.json').then(function(graphData) {
     function tooltip_node_in(event, d) {
             return tooltip_node
                     .html(
-                        `<h4>${d.id}</h4>
+                        `<h4> Sample: ${d.id}</h4>
+                         <h5> Rules: ${d.rules} </h5>
                         `
                      )
                      .style("visibility", "visible")
