@@ -119,6 +119,7 @@ def main():
                      '53'
                     ]
 
+    # Class 0
     filter_sample = [
                         '0',
                         '1',
