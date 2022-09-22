@@ -14,7 +14,7 @@ d3.json('network.json').then(function(graphData) {
     // define simulation
     var simulation = d3
         .forceSimulation(graphData.nodes)
-        .force("charge", d3.forceManyBody().strength(-200))
+        .force("charge", d3.forceManyBody().strength(-100))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .force("link", d3.forceLink(graphData.links).id(function(d)         {
                     return d.id;
@@ -30,7 +30,7 @@ d3.json('network.json').then(function(graphData) {
     .data(graphData.nodes)
     .enter()
     .append("circle")
-    .attr("r", 10)
+    .attr("r", 30)
     .attr("fill", color)
     .on("mouseover", tooltip_node_in)
     .on("mouseout", tooltip_node_out);
@@ -42,7 +42,7 @@ d3.json('network.json').then(function(graphData) {
     .data(graphData.links)
     .enter()
     .append("line")
-    .attr("stroke-width", function(d) {return (d.value)})
+    .attr("stroke-width", function(d) {return (d.value) * (d.value)})
     .style("stroke", "black")
     .on("mouseover", tooltip_in)
     .on("mouseout", tooltip_out);

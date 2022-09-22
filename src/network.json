@@ -386,373 +386,24 @@
             "value": 4,
             "common rules": [
                 "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
+                "petal width (cm) <= 1.75",
                 "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
+                "petal length (cm) <= 4.950000047683716"
             ]
         },
         {
             "source": "53",
             "target": "75",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "77",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "85",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "95",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "53",
-            "target": "129",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "53",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "75",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "77",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "85",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "95",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "65",
-            "target": "129",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "53",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "65",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "77",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "85",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "95",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "75",
-            "target": "129",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "53",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "65",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "75",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "85",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "95",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "77",
-            "target": "129",
             "value": 4,
             "common rules": [
                 "petal width (cm) > 0.800000011920929",
                 "petal width (cm) <= 1.75",
-                "petal length (cm) > 4.950000047683716",
-                "petal width (cm) > 1.550000011920929"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "53",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
                 "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
+                "petal length (cm) <= 4.950000047683716"
             ]
         },
         {
-            "source": "85",
-            "target": "65",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "75",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "85",
+            "source": "53",
             "target": "77",
             "value": 2,
             "common rules": [
@@ -761,393 +412,742 @@
             ]
         },
         {
-            "source": "85",
-            "target": "95",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "85",
-            "target": "129",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "53",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "65",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "75",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "77",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
+            "source": "53",
             "target": "85",
-            "value": 4,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal length (cm) <= 4.950000047683716",
-                "petal width (cm) <= 1.6500000357627869",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "111",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "123",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "128",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "95",
-            "target": "129",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "53",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "65",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "75",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "77",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "85",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "95",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "123",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "128",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "111",
-            "target": "129",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "53",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "65",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "75",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "77",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "85",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "95",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "111",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "128",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "123",
-            "target": "129",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "53",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "65",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "75",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "77",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "85",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "95",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "111",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "123",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) > 1.75"
-            ]
-        },
-        {
-            "source": "128",
-            "target": "129",
-            "value": 1,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929"
-            ]
-        },
-        {
-            "source": "129",
-            "target": "53",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "129",
-            "target": "65",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "129",
-            "target": "75",
-            "value": 2,
-            "common rules": [
-                "petal width (cm) > 0.800000011920929",
-                "petal width (cm) <= 1.75"
-            ]
-        },
-        {
-            "source": "129",
-            "target": "77",
             "value": 4,
             "common rules": [
                 "petal width (cm) > 0.800000011920929",
                 "petal width (cm) <= 1.75",
-                "petal length (cm) > 4.950000047683716",
-                "petal width (cm) > 1.550000011920929"
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "53",
+            "target": "95",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "53",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "53",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "53",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "53",
+            "target": "129",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "53",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "75",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "77",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "85",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "95",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "65",
+            "target": "129",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "53",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "65",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "77",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "85",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "95",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "75",
+            "target": "129",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "53",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "65",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "75",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "85",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "95",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "77",
+            "target": "129",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.550000011920929",
+                "petal width (cm) <= 1.75",
+                "petal length (cm) > 4.950000047683716"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "53",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "65",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "75",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "77",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "95",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "85",
+            "target": "129",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "53",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "65",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "75",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "77",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "85",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75",
+                "petal width (cm) <= 1.6500000357627869",
+                "petal length (cm) <= 4.950000047683716"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "111",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "123",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "128",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "95",
+            "target": "129",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "53",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "65",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "75",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "77",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "85",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "95",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "123",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "128",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "111",
+            "target": "129",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "53",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "65",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "75",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "77",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "85",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "95",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "111",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "128",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "123",
+            "target": "129",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "53",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "65",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "75",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "77",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "85",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "95",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "111",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "123",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.75"
+            ]
+        },
+        {
+            "source": "128",
+            "target": "129",
+            "value": 1,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929"
+            ]
+        },
+        {
+            "source": "129",
+            "target": "53",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "129",
+            "target": "65",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "129",
+            "target": "75",
+            "value": 2,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) <= 1.75"
+            ]
+        },
+        {
+            "source": "129",
+            "target": "77",
+            "value": 4,
+            "common rules": [
+                "petal width (cm) > 0.800000011920929",
+                "petal width (cm) > 1.550000011920929",
+                "petal width (cm) <= 1.75",
+                "petal length (cm) > 4.950000047683716"
             ]
         },
         {
