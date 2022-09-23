@@ -1,0 +1,29 @@
+{
+    "nodes":[
+        {
+            "id": "1",
+            "group": 0,
+            "rules": ["banana"]
+        },
+
+        {
+            "id": "2",
+            "group": 5,
+            "rules": ["apple",
+                      "banana"
+                    ]
+        }
+
+    ],
+
+    "links":[
+        {
+            "source": "1",
+            "target": "2",
+            "value": 10,
+            "commmon_rules":[
+                "apple", "banana"
+            ]
+        }
+    ]
+}
