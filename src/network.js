@@ -23,28 +23,29 @@ d3.json('network.json').then(function(graphData) {
         .alphaTarget(1)
         .on("tick", ticked);
 
-    // define nodes 
-    var nodes = svg
-    .append("g")
-    .selectAll("circle")
-    .data(graphData.nodes)
-    .enter()
-    .append("circle")
-    .attr("r", 20)
-    .attr("fill", color)
-    .on("mouseover", tooltip_node_in)
-    .on("mouseout", tooltip_node_out);
-  
+ 
     var links = svg
-    .append("g")
-    .selectAll("line")
-    .data(graphData.links)
-    .enter()
-    .append("line")
-    .attr("stroke-width", function(d) {return (d.value)})
-    .style("stroke", "black")
-    .on("mouseover", tooltip_in)
-    .on("mouseout", tooltip_out);
+        .append("g")
+        .selectAll("line")
+        .data(graphData.links)
+        .enter()
+        .append("line")
+        .attr("stroke-width", function(d) {return (d.value)})
+        .style("stroke", "black")
+        .on("mouseover", tooltip_in)
+        .on("mouseout", tooltip_out);
+
+        // define nodes 
+    var nodes = svg
+        .append("g")
+        .selectAll("circle")
+        .data(graphData.nodes)
+        .enter()
+        .append("circle")
+        .attr("r", 20)
+        .attr("fill", color)
+        .on("mouseover", tooltip_node_in)
+        .on("mouseout", tooltip_node_out);
 
    
     // define texts

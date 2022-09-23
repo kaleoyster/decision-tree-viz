@@ -275,14 +275,13 @@ def main():
     filter_paths = []
     for sample in all_paths:
         sam_id = sample[2]
-        if sam_id in filter_sample_0:
+        if sam_id in filter_sample_1:
             filter_paths.append(sample)
 
     nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
     network =  create_json(new_nodes, links)
     #path = '../docs/data' + '/' + 'network.json'
-    print(network)
     # For source testing
     path = 'network.json'
     with open(path, 'w+') as json_file:
