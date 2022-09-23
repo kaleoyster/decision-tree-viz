@@ -16,7 +16,7 @@ d3.json('network.json').then(function(graphData) {
         .forceSimulation(graphData.nodes)
         .force("charge", d3.forceManyBody().strength(-100))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("link", d3.forceLink(graphData.links).id(function(d)         {
+        .force("link", d3.forceLink(graphData.links).id(function(d){
                     return d.id;
                     }).distance(200))
         .force("collide",d3.forceCollide().strength(0).radius(0))
@@ -35,7 +35,7 @@ d3.json('network.json').then(function(graphData) {
         .on("mouseover", tooltip_in)
         .on("mouseout", tooltip_out);
 
-        // define nodes 
+    // define nodes 
     var nodes = svg
         .append("g")
         .selectAll("circle")

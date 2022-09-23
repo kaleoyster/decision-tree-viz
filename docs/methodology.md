@@ -47,6 +47,9 @@ We use $A--B$ to denote an edge between vertices $A$ and $B$ rather than the set
 - **How to describe that there is a value to the size of node as well?**
 
 ### Edge cases
+- The overall graph will be a disconnected graph, where there does not exist any path between at least one pair or vertices is called as a disconnected graph.
+
+1. There will be two clusters:  i
 1. Every node should be connected to at least with a link node. Because, every node comes from root node.
 2. If there is a commonality between the nodes then there is a link.
 3. There can not be duplicate links in a system.
