@@ -1,8 +1,9 @@
-// <Lattice object of 7 atoms 14 concepts 2 coatoms at 0x11b77d370>
+// <Lattice object of 6 atoms 12 concepts 2 coatoms at 0x1224cba30>
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
 	c0
+	c0 -> c0 [color=transparent labelangle=90 taillabel="petal width (cm)<=0.800000011920929"]
 	c1
 	c1 -> c1 [color=transparent headlabel=106 labelangle=270]
 	c1 -> c1 [color=transparent labelangle=90 taillabel="petal width (cm)>1.6500000357627869"]
@@ -28,30 +29,23 @@ digraph Lattice {
 	c6 -> c4
 	c6 -> c5
 	c7
-	c7 -> c7 [color=transparent headlabel="70 100 101 102 103 104 105 107 108 109 110 111 112 113 114 115 116 117 118 120 121 122 123 124 125 126 127 128 130 131 132 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149" labelangle=270]
-	c7 -> c7 [color=transparent labelangle=90 taillabel="petal width (cm)>1.75"]
+	c7 -> c7 [color=transparent headlabel="50 51 52 53 54 55 56 58 59 61 63 64 65 66 68 71 72 73 74 75 76 78 82 84 85 86 87 88 89 90 91 92 94 95 96 97 99" labelangle=270]
+	c7 -> c7 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.6500000357627869"]
 	c7 -> c0
 	c8
-	c8 -> c8 [color=transparent headlabel="50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 71 72 73 74 75 76 78 79 80 81 82 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99" labelangle=270]
-	c8 -> c8 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.6500000357627869"]
-	c8 -> c0
+	c8 -> c8 [color=transparent labelangle=90 taillabel="petal length (cm)<=4.950000047683716"]
+	c8 -> c1
+	c8 -> c7
 	c9
-	c9 -> c9 [color=transparent labelangle=90 taillabel="petal length (cm)<=4.950000047683716"]
-	c9 -> c1
+	c9 -> c9 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.75"]
+	c9 -> c6
 	c9 -> c8
 	c10
-	c10 -> c10 [color=transparent headlabel="0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49" labelangle=270]
-	c10 -> c10 [color=transparent labelangle=90 taillabel="petal width (cm)<=0.800000011920929"]
+	c10 -> c10 [color=transparent headlabel="70 100 101 102 103 104 105 107 108 109 110 111 112 113 114 115 116 117 118 120 121 122 123 124 125 126 127 128 130 131 132 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149" labelangle=270]
+	c10 -> c10 [color=transparent labelangle=90 taillabel="petal width (cm)>1.75"]
 	c10 -> c0
 	c11
-	c11 -> c11 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.75"]
-	c11 -> c6
+	c11 -> c11 [color=transparent labelangle=90 taillabel="petal width (cm)>0.800000011920929"]
 	c11 -> c9
-	c12
-	c12 -> c12 [color=transparent labelangle=90 taillabel="petal width (cm)>0.800000011920929"]
-	c12 -> c7
-	c12 -> c11
-	c13
-	c13 -> c10
-	c13 -> c12
+	c11 -> c10
 }

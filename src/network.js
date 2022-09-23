@@ -22,8 +22,8 @@ d3.json('network.json').then(function(graphData) {
         .force("collide",d3.forceCollide().strength(0).radius(0))
         .alphaTarget(1)
         .on("tick", ticked);
-   
-    // define nodes 
+
+ // define nodes 
     var nodes = svg
     .append("g")
     .selectAll("circle")
@@ -35,6 +35,8 @@ d3.json('network.json').then(function(graphData) {
     .on("mouseover", tooltip_node_in)
     .on("mouseout", tooltip_node_out);
   
+
+
     // define links 
     var links = svg
     .append("g")
@@ -43,10 +45,7 @@ d3.json('network.json').then(function(graphData) {
     .enter()
     .append("line")
     .attr("stroke-width", function(d) {return (d.value) * (d.value)})
-    .style("stroke", "black")
-    .on("mouseover", tooltip_in)
-    .on("mouseout", tooltip_out);
-
+    
     // define texts
     var texts = svg
     .append("g")
