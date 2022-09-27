@@ -45,7 +45,7 @@ def create_node_dictionary(paths):
         rule = dictionary[node]
         temp = {
                   'id': node,
-                  'group': int(group_val), # Class label of the IRIS flower
+                  'group': group_val, 
                   'rule': rule
                 }
         new_nodes.append(temp)
@@ -119,7 +119,7 @@ def main():
                      '53'
                     ]
 
-    # class 0
+    # class 0: gravel bridges
     filter_sample_0 = ['50',
                      '51',
                      '52',
@@ -210,7 +210,8 @@ def main():
                      '147',
                      '148',
                      '149']
-    # Class 1:
+
+    # Class 1: paved bridges
     filter_sample_1 = ['0',
                         '1',
                         '2',
@@ -274,9 +275,9 @@ def main():
 
     filter_paths = []
     for sample in all_paths:
-        sam_id = sample[2]
-        if sam_id in filter_sample_1:
-            filter_paths.append(sample)
+        #sam_id = sample[2]
+        #if sam_id in filter_sample_1:
+        filter_paths.append(sample)
 
     nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
