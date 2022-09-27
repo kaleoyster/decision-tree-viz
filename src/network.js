@@ -16,35 +16,36 @@ d3.json('network.json').then(function(graphData) {
         .forceSimulation(graphData.nodes)
         .force("charge", d3.forceManyBody().strength(-100))
         .force("center", d3.forceCenter(width / 2, height / 2))
-        .force("link", d3.forceLink(graphData.links).id(function(d)         {
+        .force("link", d3.forceLink(graphData.links).id(function(d){
                     return d.id;
                     }).distance(200))
         .force("collide",d3.forceCollide().strength(0).radius(0))
         .alphaTarget(1)
         .on("tick", ticked);
 
+ 
+    var links = svg
+        .append("g")
+        .selectAll("line")
+        .data(graphData.links)
+        .enter()
+        .append("line")
+        .attr("stroke-width", function(d) {return (d.value)})
+        .style("stroke", "black")
+        .on("mouseover", tooltip_in)
+        .on("mouseout", tooltip_out);
+
     // define nodes 
     var nodes = svg
-    .append("g")
-    .selectAll("circle")
-    .data(graphData.nodes)
-    .enter()
-    .append("circle")
-    .attr("r", 20)
-    .attr("fill", color)
-    .on("mouseover", tooltip_node_in)
-    .on("mouseout", tooltip_node_out);
-  
-    var links = svg
-    .append("g")
-    .selectAll("line")
-    .data(graphData.links)
-    .enter()
-    .append("line")
-    .attr("stroke-width", function(d) {return (d.value)})
-    .style("stroke", "black")
-    .on("mouseover", tooltip_in)
-    .on("mouseout", tooltip_out);
+        .append("g")
+        .selectAll("circle")
+        .data(graphData.nodes)
+        .enter()
+        .append("circle")
+        .attr("r", 20)
+        .attr("fill", color)
+        .on("mouseover", tooltip_node_in)
+        .on("mouseout", tooltip_node_out);
 
    
     // define texts
