@@ -1,26 +1,61 @@
-// <Lattice object of 3 atoms 6 concepts 2 coatoms at 0x124515730>
+// <Lattice object of 7 atoms 15 concepts 3 coatoms at 0x120b21e80>
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
 	c0
-	c0 -> c0 [color=transparent labelangle=90 taillabel="latitude<=41.96083450317383 latitude>41.96083450317383 longitude>-97.84249877929688 averageDailyTraffic<=27.5 operatingRating<=46.35000038146973 longitude<=-97.84249877929688"]
 	c1
-	c1 -> c1 [color=transparent headlabel="S370 01407L" labelangle=270]
-	c1 -> c1 [color=transparent labelangle=90 taillabel="operatingRating<=64.35000228881836 operatingRating>46.35000038146973"]
+	c1 -> c1 [color=transparent headlabel=C000504405P labelangle=270]
+	c1 -> c1 [color=transparent labelangle=90 taillabel="longitude<=-97.84249877929688"]
 	c1 -> c0
 	c2
-	c2 -> c2 [color=transparent headlabel="S006 31632 S006 34157 S030 37773R S030 45020 S077 06205R" labelangle=270]
-	c2 -> c2 [color=transparent labelangle=90 taillabel="operatingRating>64.35000228881836"]
+	c2 -> c2 [color=transparent headlabel="C001424430 C002010420" labelangle=270]
+	c2 -> c2 [color=transparent labelangle=90 taillabel="latitude>41.96083450317383"]
 	c2 -> c0
 	c3
-	c3 -> c3 [color=transparent labelangle=90 taillabel="yearBuilt>1969.0"]
-	c3 -> c1
-	c3 -> c2
+	c3 -> c3 [color=transparent headlabel="C002605805 C007013015" labelangle=270]
+	c3 -> c3 [color=transparent labelangle=90 taillabel="longitude>-97.84249877929688"]
+	c3 -> c0
 	c4
-	c4 -> c4 [color=transparent headlabel="S080 21627L S080 31102R S080 31128L S080 31145L S080 36684L S080 36684R" labelangle=270]
-	c4 -> c4 [color=transparent labelangle=90 taillabel="yearBuilt<=1969.0 averageDailyTraffic>27.5"]
-	c4 -> c0
+	c4 -> c1
+	c4 -> c3
 	c5
-	c5 -> c3
-	c5 -> c4
+	c5 -> c5 [color=transparent headlabel="C001232430 C001721303 C003403305P C005003910" labelangle=270]
+	c5 -> c5 [color=transparent labelangle=90 taillabel="operatingRating>64.35000228881836"]
+	c5 -> c0
+	c6
+	c6 -> c6 [color=transparent labelangle=90 taillabel="averageDailyTraffic<=27.5"]
+	c6 -> c2
+	c6 -> c4
+	c7
+	c7 -> c7 [color=transparent headlabel="C002201710P C002201805 C002701120 C002702510 C004112115 C007602935 C007821630" labelangle=270]
+	c7 -> c7 [color=transparent labelangle=90 taillabel="averageDailyTraffic>27.5"]
+	c7 -> c0
+	c8
+	c8 -> c8 [color=transparent headlabel="C001030410 C001202215 C001804405 C002000735 C002012030 C003412305 C004101113 C006600305P C007811320" labelangle=270]
+	c8 -> c8 [color=transparent labelangle=90 taillabel="latitude<=41.96083450317383"]
+	c8 -> c0
+	c9
+	c9 -> c9 [color=transparent headlabel="C002001625 C002003535 C002022925 C002701510 C002704205 C003323615 C004011730 C004730720 C006730850" labelangle=270]
+	c9 -> c9 [color=transparent labelangle=90 taillabel="operatingRating>46.35000038146973"]
+	c9 -> c0
+	c10
+	c10 -> c10 [color=transparent labelangle=90 taillabel="yearBuilt<=1969.0"]
+	c10 -> c4
+	c10 -> c7
+	c11
+	c11 -> c11 [color=transparent labelangle=90 taillabel="operatingRating<=46.35000038146973"]
+	c11 -> c2
+	c11 -> c8
+	c12
+	c12 -> c12 [color=transparent labelangle=90 taillabel="operatingRating<=64.35000228881836"]
+	c12 -> c9
+	c12 -> c11
+	c13
+	c13 -> c13 [color=transparent labelangle=90 taillabel="yearBuilt>1969.0"]
+	c13 -> c5
+	c13 -> c12
+	c14
+	c14 -> c6
+	c14 -> c10
+	c14 -> c13
 }

@@ -6,7 +6,7 @@ def create_sample(file):
     return sample_1
 
 def main():
-    path = 'nebraska_paved.csv'
+    path = 'nebraska_gravel.csv'
     samples = create_sample(path)
     samples.to_csv('samples.csv', index=False)
 

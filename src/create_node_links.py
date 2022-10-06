@@ -5,15 +5,15 @@ Description:
 import csv
 import json
 import random
+import pandas as pd
 from tqdm import tqdm
 from collections import defaultdict
 
-def read_file():
+def read_file(path = 'path.csv'):
     """
     Description:
         Returns file path given filename
     """
-    path = 'path.csv'
     all_paths = list()
     with open(path, 'r') as csv_file:
         paths = csv.reader(csv_file, delimiter = ',')
@@ -274,10 +274,17 @@ def main():
                         '98']
 
     filter_paths = []
+    samples = read_file('samples.csv')
+    new_sample = []
+    for index in samples:
+        temp = index[0]
+        new_sample.append(temp)
+    samples = new_sample
+
     for sample in all_paths:
-        #sam_id = sample[2]
-        #if sam_id in filter_sample_1:
-        filter_paths.append(sample)
+        sam_id = sample[2]
+        if sam_id in samples:
+            filter_paths.append(sample)
 
     nodes, new_nodes, dictionary = create_node_dictionary(filter_paths)
     links = create_links(nodes, dictionary)
