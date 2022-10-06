@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+// <Lattice object of 6 atoms 12 concepts 2 coatoms at 0x11bd5cf10>
+=======
 // <Lattice object of 7 atoms 15 concepts 3 coatoms at 0x120b21e80>
+>>>>>>> 0d0478228de894803b54303f9752025e7ad73b25
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
