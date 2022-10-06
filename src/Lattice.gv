@@ -1,51 +1,65 @@
+<<<<<<< HEAD
 // <Lattice object of 6 atoms 12 concepts 2 coatoms at 0x11bd5cf10>
+=======
+// <Lattice object of 7 atoms 15 concepts 3 coatoms at 0x120b21e80>
+>>>>>>> 0d0478228de894803b54303f9752025e7ad73b25
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
 	c0
-	c0 -> c0 [color=transparent labelangle=90 taillabel="petal width (cm)<=0.800000011920929"]
 	c1
-	c1 -> c1 [color=transparent headlabel=106 labelangle=270]
-	c1 -> c1 [color=transparent labelangle=90 taillabel="petal width (cm)>1.6500000357627869"]
+	c1 -> c1 [color=transparent headlabel=C000504405P labelangle=270]
+	c1 -> c1 [color=transparent labelangle=90 taillabel="longitude<=-97.84249877929688"]
 	c1 -> c0
 	c2
-	c2 -> c2 [color=transparent headlabel=129 labelangle=270]
-	c2 -> c2 [color=transparent labelangle=90 taillabel="petal length (cm)>5.450000047683716"]
+	c2 -> c2 [color=transparent headlabel="C001424430 C002010420" labelangle=270]
+	c2 -> c2 [color=transparent labelangle=90 taillabel="latitude>41.96083450317383"]
 	c2 -> c0
 	c3
-	c3 -> c3 [color=transparent headlabel="77 83" labelangle=270]
-	c3 -> c3 [color=transparent labelangle=90 taillabel="petal length (cm)<=5.450000047683716"]
+	c3 -> c3 [color=transparent headlabel="C002605805 C007013015" labelangle=270]
+	c3 -> c3 [color=transparent labelangle=90 taillabel="longitude>-97.84249877929688"]
 	c3 -> c0
 	c4
-	c4 -> c4 [color=transparent labelangle=90 taillabel="petal width (cm)>1.550000011920929"]
-	c4 -> c2
+	c4 -> c1
 	c4 -> c3
 	c5
-	c5 -> c5 [color=transparent headlabel="119 133 134" labelangle=270]
-	c5 -> c5 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.550000011920929"]
+	c5 -> c5 [color=transparent headlabel="C001232430 C001721303 C003403305P C005003910" labelangle=270]
+	c5 -> c5 [color=transparent labelangle=90 taillabel="operatingRating>64.35000228881836"]
 	c5 -> c0
 	c6
-	c6 -> c6 [color=transparent labelangle=90 taillabel="petal length (cm)>4.950000047683716"]
+	c6 -> c6 [color=transparent labelangle=90 taillabel="averageDailyTraffic<=27.5"]
+	c6 -> c2
 	c6 -> c4
-	c6 -> c5
 	c7
-	c7 -> c7 [color=transparent headlabel="50 51 52 53 54 55 56 58 59 61 63 64 65 66 68 71 72 73 74 75 76 78 82 84 85 86 87 88 89 90 91 92 94 95 96 97 99" labelangle=270]
-	c7 -> c7 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.6500000357627869"]
+	c7 -> c7 [color=transparent headlabel="C002201710P C002201805 C002701120 C002702510 C004112115 C007602935 C007821630" labelangle=270]
+	c7 -> c7 [color=transparent labelangle=90 taillabel="averageDailyTraffic>27.5"]
 	c7 -> c0
 	c8
-	c8 -> c8 [color=transparent labelangle=90 taillabel="petal length (cm)<=4.950000047683716"]
-	c8 -> c1
-	c8 -> c7
+	c8 -> c8 [color=transparent headlabel="C001030410 C001202215 C001804405 C002000735 C002012030 C003412305 C004101113 C006600305P C007811320" labelangle=270]
+	c8 -> c8 [color=transparent labelangle=90 taillabel="latitude<=41.96083450317383"]
+	c8 -> c0
 	c9
-	c9 -> c9 [color=transparent labelangle=90 taillabel="petal width (cm)<=1.75"]
-	c9 -> c6
-	c9 -> c8
+	c9 -> c9 [color=transparent headlabel="C002001625 C002003535 C002022925 C002701510 C002704205 C003323615 C004011730 C004730720 C006730850" labelangle=270]
+	c9 -> c9 [color=transparent labelangle=90 taillabel="operatingRating>46.35000038146973"]
+	c9 -> c0
 	c10
-	c10 -> c10 [color=transparent headlabel="70 100 101 102 103 104 105 107 108 109 110 111 112 113 114 115 116 117 118 120 121 122 123 124 125 126 127 128 130 131 132 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149" labelangle=270]
-	c10 -> c10 [color=transparent labelangle=90 taillabel="petal width (cm)>1.75"]
-	c10 -> c0
+	c10 -> c10 [color=transparent labelangle=90 taillabel="yearBuilt<=1969.0"]
+	c10 -> c4
+	c10 -> c7
 	c11
-	c11 -> c11 [color=transparent labelangle=90 taillabel="petal width (cm)>0.800000011920929"]
-	c11 -> c9
-	c11 -> c10
+	c11 -> c11 [color=transparent labelangle=90 taillabel="operatingRating<=46.35000038146973"]
+	c11 -> c2
+	c11 -> c8
+	c12
+	c12 -> c12 [color=transparent labelangle=90 taillabel="operatingRating<=64.35000228881836"]
+	c12 -> c9
+	c12 -> c11
+	c13
+	c13 -> c13 [color=transparent labelangle=90 taillabel="yearBuilt>1969.0"]
+	c13 -> c5
+	c13 -> c12
+	c14
+	c14 -> c6
+	c14 -> c10
+	c14 -> c13
 }
