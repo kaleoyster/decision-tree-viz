@@ -1,34 +1,26 @@
-// <Lattice object of 4 atoms 8 concepts 2 coatoms at 0x11857f850>
+// <Lattice object of 3 atoms 6 concepts 2 coatoms at 0x124515730>
 digraph Lattice {
 	node [label="" shape=circle style=filled width=.25]
 	edge [dir=none labeldistance=1.5 minlen=2]
 	c0
-	c0 -> c0 [color=transparent labelangle=90 taillabel="latitude>41.96083450317383 longitude>-97.84249877929688 averageDailyTraffic<=27.5 longitude<=-97.84249877929688"]
+	c0 -> c0 [color=transparent labelangle=90 taillabel="latitude<=41.96083450317383 latitude>41.96083450317383 longitude>-97.84249877929688 averageDailyTraffic<=27.5 operatingRating<=46.35000038146973 longitude<=-97.84249877929688"]
 	c1
-	c1 -> c1 [color=transparent headlabel="S020 42270 S075 02894" labelangle=270]
-	c1 -> c1 [color=transparent labelangle=90 taillabel="operatingRating>64.35000228881836"]
+	c1 -> c1 [color=transparent headlabel="S370 01407L" labelangle=270]
+	c1 -> c1 [color=transparent labelangle=90 taillabel="operatingRating<=64.35000228881836 operatingRating>46.35000038146973"]
 	c1 -> c0
 	c2
-	c2 -> c2 [color=transparent headlabel="S047 06222 S370 01566R" labelangle=270]
-	c2 -> c2 [color=transparent labelangle=90 taillabel="latitude<=41.96083450317383 operatingRating<=46.35000038146973"]
+	c2 -> c2 [color=transparent headlabel="S006 31632 S006 34157 S030 37773R S030 45020 S077 06205R" labelangle=270]
+	c2 -> c2 [color=transparent labelangle=90 taillabel="operatingRating>64.35000228881836"]
 	c2 -> c0
 	c3
-	c3 -> c3 [color=transparent headlabel="S030 42074 S050 07712 S370 01407L" labelangle=270]
-	c3 -> c3 [color=transparent labelangle=90 taillabel="operatingRating>46.35000038146973"]
-	c3 -> c0
+	c3 -> c3 [color=transparent labelangle=90 taillabel="yearBuilt>1969.0"]
+	c3 -> c1
+	c3 -> c2
 	c4
-	c4 -> c4 [color=transparent labelangle=90 taillabel="operatingRating<=64.35000228881836"]
-	c4 -> c2
-	c4 -> c3
+	c4 -> c4 [color=transparent headlabel="S080 21627L S080 31102R S080 31128L S080 31145L S080 36684L S080 36684R" labelangle=270]
+	c4 -> c4 [color=transparent labelangle=90 taillabel="yearBuilt<=1969.0 averageDailyTraffic>27.5"]
+	c4 -> c0
 	c5
-	c5 -> c5 [color=transparent labelangle=90 taillabel="yearBuilt>1969.0"]
-	c5 -> c1
+	c5 -> c3
 	c5 -> c4
-	c6
-	c6 -> c6 [color=transparent headlabel="S044 04983L S050 09127 S080 18181R S080 18470L S080 18470R S080 20100L S092 46106 S275 17144" labelangle=270]
-	c6 -> c6 [color=transparent labelangle=90 taillabel="averageDailyTraffic>27.5 yearBuilt<=1969.0"]
-	c6 -> c0
-	c7
-	c7 -> c5
-	c7 -> c6
 }
