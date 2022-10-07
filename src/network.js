@@ -1,4 +1,4 @@
-//  Oridnal Scale 
+// Oridnal Scale 
 const scale = d3.scaleOrdinal(d3.schemeCategory10)
 const color = d => scale(d.group)
 
@@ -6,7 +6,7 @@ var svg =  d3.select("svg");
 var width = svg.attr("width");
 var height = svg.attr("height");
 
-// import dataset
+// Import dataset
 d3.json('network.json').then(function(graphData) {
     console.log("Printing nodes");
     console.log(graphData.nodes);
@@ -47,7 +47,6 @@ d3.json('network.json').then(function(graphData) {
         .on("mouseover", tooltip_node_in)
         .on("mouseout", tooltip_node_out);
 
-   
     // define texts
     var texts = svg
     .append("g")
