@@ -275,6 +275,8 @@ def main():
 
     filter_paths = []
     samples = read_file('samples.csv')
+    samples = samples[:30]
+    #samples = filter_sample_1
     new_sample = []
     for index in samples:
         temp = index[0]
