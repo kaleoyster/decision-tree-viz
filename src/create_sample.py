@@ -1,13 +1,32 @@
+import argparse
 import pandas as pd
 
 def create_sample(file):
     df = pd.read_csv(file)
-    sample_1 = df['structureNumber']
-    return sample_1
+    samples = df[['structureNumber',
+                  'yearBuilt',
+                  'age',
+                  'adtCategory',
+                  'material',
+                  'lengthOfMaximumSpan',
+                  'structureLength',
+                  'operatingRating',
+                  'deckNumberIntervention',
+                  'supNumberIntervention',
+                  'subNumberIntervention',
+                ]]
+    return samples
 
 def main():
-    path = 'nebraska_gravel.csv'
-    samples = create_sample(path)
-    samples.to_csv('samples.csv', index=False)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', '--inputfile', help='input filename')
+    parser.add_argument('-o', '--outputfile', help='outputfile filename')
 
-main()
+    args = parser.parse_args()
+    path = args.inputfile
+    output_file = args.outputfile
+    samples = create_sample(path)
+    samples.to_csv(output_file, index=False)
+
+if __name__ == '__main__':
+    main()

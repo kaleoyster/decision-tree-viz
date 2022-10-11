@@ -131,4 +131,5 @@ def main():
     samples = random.sample(samples, 50)
     create_conceptual_table(paths, samples)
 
-main()
+if __name__ == '__main__':
+    main()
