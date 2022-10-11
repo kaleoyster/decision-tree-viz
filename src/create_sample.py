@@ -15,6 +15,7 @@ def create_sample(file):
                   'supNumberIntervention',
                   'subNumberIntervention',
                 ]]
+    samples = samples.sample(n=50)
     return samples
 
 def main():

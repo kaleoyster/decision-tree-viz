@@ -7,6 +7,7 @@ import json
 import random
 import argparse
 import pandas as pd
+from maps import *
 from tqdm import tqdm
 from collections import defaultdict
 
@@ -58,6 +59,11 @@ def create_node_dictionary(paths, dataframe):
                 }
 
         for col, val in attr_dict.items():
+            if col == 'material':
+                mat_map = mapDict['CatMaterial']
+                val = int(val)
+                val = mat_map[val]
+
             temp[col] = val
 
         new_nodes.append(temp)
@@ -122,7 +128,6 @@ def main():
 
     filter_paths = []
     samples, sample_header = read_file(sample_file)
-    samples = samples[:30]
 
     # Get structure numbers
     new_sample = []

@@ -92,7 +92,8 @@ d3.json('network.json').then(function(graphData) {
                  <h4>Target: ${d.target.id}</h4>
                  <br>
                  <h5> (Relation: source value, target value) </h5>
-                 <h5> Rules: ${d.source.rules}, ${d.target.rules} </h5>
+                 <h5> Source Rules: ${d.source.rule} </h5>
+                 <h5> Target Rules: ${d.target.rule} </h5>
                 `
                 )
                 .style("visibility", "visible")
@@ -111,7 +112,16 @@ d3.json('network.json').then(function(graphData) {
             return tooltip_node
                     .html(
                         `<h4> Sample: ${d.id}</h4>
-                         <h5> Rules: ${d.rules} </h5>
+                         <h5> Rules: ${d.rule} </h5>
+                         <h5> (Attributes) </h5>
+                         <h5> Age: ${d.age} </h5>
+                         <h5> ADT category: ${d.adtCategory} </h5>
+                         <h5> Material: ${d.material} </h5>
+                         <h5> Length: ${d.structureLength} </h5>
+                         <h5> Operating Rating: ${d.operatingRating} </h5>
+                         <h5> Deck (Intervention): ${d.deckNumberIntervention} </h5>
+                         <h5> Superstructure (Intervention): ${d.supNumberIntervention} </h5>
+                         <h5> Substructure (Intervention): ${d.subNumberIntervention} </h5>
                         `
                      )
                      .style("visibility", "visible")
