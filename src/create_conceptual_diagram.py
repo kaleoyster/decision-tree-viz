@@ -128,7 +128,7 @@ def main():
 
     paths = read_file(path)
     samples = read_sample(sample_file)
-    samples = random.sample(samples, 50)
+    #samples = random.sample(samples, 50)
     create_conceptual_table(paths, samples)
 
 if __name__ == '__main__':
